@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6936851094518448817}
   - component: {fileID: 2351185387109123611}
+  - component: {fileID: 2837417470495158675}
   - component: {fileID: 7046608258427695007}
   m_Layer: 0
   m_Name: Item
@@ -71,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -913285195914314525, guid: c028984257d619d4c9f1cf614fc23c53,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,9 +81,25 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &2837417470495158675
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5647817109397178984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &7046608258427695007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.5
+  item: {fileID: 11400000, guid: 0b360898af9a9694e8fbced81ae662bb, type: 2}
