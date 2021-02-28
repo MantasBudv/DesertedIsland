@@ -3,45 +3,34 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    private const float MOVE_SPEED = 5f;
-    private Rigidbody2D rigidbody2D;
-    private Vector3 moveDir;
+    public float MOVE_SPEED = 5f;
+    public Rigidbody2D rb;
+    private Vector2 moveDir;
 
     private void Awake() 
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
     
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-        float moveX = 0f;
-        float moveY = 0f;
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            moveY = +1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveX = +1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            moveY = -1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveX = -1f;
-        }
-
-        moveDir = new Vector3(moveX, moveY).normalized;
+        GetInputs();
     }
     void FixedUpdate() 
     {
-        rigidbody2D.velocity = moveDir * MOVE_SPEED;
+        Move();
+    }
+
+    void GetInputs()
+    {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        moveDir = new Vector2(moveX, moveY).normalized;
+    }
+
+    void Move()
+    {
+        rb.velocity = moveDir * MOVE_SPEED;
     }
 }
