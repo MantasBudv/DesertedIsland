@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public float BASE_movementSpeed = 5f;
+    public float BASE_MOVE_SPEED = 3.5f;
     public Rigidbody2D rb;
     public float movementSpeed;
     public Animator animator;
@@ -36,7 +36,7 @@ public class CharacterController : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = moveDir * movementSpeed * BASE_movementSpeed;
+        rb.velocity = moveDir * movementSpeed * BASE_MOVE_SPEED;
     }
 
     void Animate()
