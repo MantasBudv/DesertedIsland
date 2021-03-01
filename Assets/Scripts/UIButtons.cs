@@ -18,4 +18,13 @@ public class UIButtons : MonoBehaviour
         Application.Quit();
     }
 
+    public void Update()
+    {
+        if (Input.GetButtonDown("Escape"))
+        {
+            Debug.Log("exiting");
+            ExitGame();
+        }
+    }
+
 }
