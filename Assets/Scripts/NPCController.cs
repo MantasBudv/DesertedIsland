@@ -21,7 +21,7 @@ public class NPCController : MonoBehaviour
 
     [SerializeField] private float scaredRange = 0.5f;
 
-    [SerializeField] private Rigidbody2D player;
+    private Rigidbody2D player;
 
     private Rigidbody2D _rb;
     private float _rotationRads;
@@ -33,6 +33,7 @@ public class NPCController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _state = new NpcState();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -70,21 +71,21 @@ public class NPCController : MonoBehaviour
         Vector2 currentPosition = _rb.position;
         var newPosition = currentPosition + positionMovement;
         
-        if (IsCollision(newPosition))
-        {
-            while (IsCollision(newPosition))
-            {
-                _rotationRads += UnityEngine.Random.Range(0.0f, Mathf.PI * 2);
-                positionMovement = new Vector2(
-                    Mathf.Cos(_rotationRads) * moveSpeed,
-                    Mathf.Sin(_rotationRads) * moveSpeed
-                );
-                newPosition = currentPosition + 60 * positionMovement;
-            }
+        // if (IsCollision(newPosition))
+        // {
+        //     while (IsCollision(newPosition))
+        //     {
+        //         _rotationRads += UnityEngine.Random.Range(0.0f, Mathf.PI * 2);
+        //         positionMovement = new Vector2(
+        //             Mathf.Cos(_rotationRads) * moveSpeed,
+        //             Mathf.Sin(_rotationRads) * moveSpeed
+        //         );
+        //         newPosition = currentPosition + 60 * positionMovement;
+        //     }
 
-            _state.AssignBumped();
-            return;
-        }
+        //     _state.AssignBumped();
+        //     return;
+        // }
 
         _rb.MovePosition(newPosition);
     }

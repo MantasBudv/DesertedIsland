@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    #region Singleton
     private void Awake()
     {
         if (!created)
@@ -16,7 +15,6 @@ public class InventoryUI : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    #endregion
     private static bool created = false;
     public Transform itemsParent;
     public GameObject inventoryUI;
