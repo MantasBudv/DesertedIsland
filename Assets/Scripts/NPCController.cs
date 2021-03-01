@@ -19,12 +19,16 @@ public class NPCController : MonoBehaviour
 
     [SerializeField] private float scaredRange = 0.5f;
 
+    [SerializeField] private GameObject itemDrop;
+    
     private Rigidbody2D _player;
     private Rigidbody2D _rb;
     private float _rotationRads;
     private Vector2 _positionOffset;
     private float _distanceToPlayer;
     private NpcState _state;
+    
+    private float dyingEnd;
 
     private void Awake()
     {
@@ -38,10 +42,20 @@ public class NPCController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        UpdateDistanceToPlayer();
-        UpdateState();
-        UpdateRotation();
-        UpdatePosition();
+        if (_state.Action != CurrentAction.Dying)
+        {
+            UpdateDistanceToPlayer();
+            UpdateState();
+            UpdateRotation();
+            UpdatePosition();
+        }
+        else
+        {
+            if (Time.fixedTime < dyingEnd) return;
+            Instantiate(itemDrop, _rb.position, Quaternion.identity);
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 
     private void UpdateRotation()
@@ -82,6 +96,25 @@ public class NPCController : MonoBehaviour
     private void UpdateState()
     {
         _state.Update(_distanceToPlayer, scaredRange, concernedRange);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        var otherObject = other.gameObject;
+        if (otherObject.CompareTag("Player") && _state.Action != CurrentAction.Dying)
+        {
+            _state.Action = CurrentAction.Dying;
+            dyingEnd = Time.fixedTime + 2.0f;
+            _rb.velocity = new Vector2(0.0f, 0.0f);
+            foreach(var c in gameObject.GetComponentsInChildren<Collider2D>())
+            {
+                if(c.isTrigger) c.enabled = false;
+            }
+        }
+        else if (_state.Action != CurrentAction.Dying)
+        {
+            _rotationRads += UnityEngine.Random.Range(-Mathf.PI / 4, Mathf.PI / 4);
+        }
     }
 
     private class NpcState
@@ -284,7 +317,7 @@ public class NPCController : MonoBehaviour
         IdleStanding,
         IdleWalking,
         Concerned,
-        Scared
+        Scared,
+        Dying
     }
 }
-
