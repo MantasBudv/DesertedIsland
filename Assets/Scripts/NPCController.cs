@@ -113,7 +113,7 @@ public class NPCController : MonoBehaviour
         }
         else if (_state.Action != CurrentAction.Dying)
         {
-            _rotationRads += UnityEngine.Random.Range(-Mathf.PI / 4, Mathf.PI / 4);
+            _rotationRads += Mathf.PI + UnityEngine.Random.Range(-Mathf.PI / 4, Mathf.PI / 4);
         }
     }
 
