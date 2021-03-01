@@ -11,18 +11,15 @@ using Random = UnityEngine.Random;
 public class NPCController : MonoBehaviour
 {
 
-    [SerializeField] private Vector2 minRoamingCoords = new Vector2(-10, 5);
-    
-    [SerializeField] private Vector2 maxRoamingCoords = new Vector2(10, -5);
-    
-    [SerializeField] private float moveSpeed = 0.05f;
+    [SerializeField] private float moveSpeedRegular = 2.2f;
+
+    [SerializeField] private float moveSpeedScared = 3f;
 
     [SerializeField] private float concernedRange = 1.5f;
 
     [SerializeField] private float scaredRange = 0.5f;
 
-    [SerializeField] private Rigidbody2D player;
-
+    private Rigidbody2D _player;
     private Rigidbody2D _rb;
     private float _rotationRads;
     private Vector2 _positionOffset;
@@ -35,6 +32,10 @@ public class NPCController : MonoBehaviour
         _state = new NpcState();
     }
 
+    private void Start()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+    }
     private void FixedUpdate()
     {
         UpdateDistanceToPlayer();
@@ -45,64 +46,38 @@ public class NPCController : MonoBehaviour
 
     private void UpdateRotation()
     {
-
         if (_state.ShouldRotate() == false)
         {
             return;
         }
         
-        _rotationRads = _state.GetRotation(_positionOffset) + UnityEngine.Random.Range(0.0f, Mathf.PI / 4);
+        _rotationRads = _state.GetRotation(_positionOffset) + UnityEngine.Random.Range(-Mathf.PI / 16, Mathf.PI / 16);
     }
 
     private void UpdatePosition()
     {
-        if (_state.IsStanding())
+        if (_state.Action == CurrentAction.IdleStanding)
         {
+            _rb.velocity = new Vector2(0.0f, 0.0f);
             return;
         }
-        
+
+        var movementSpeed = (_state.Action == CurrentAction.Scared) ? moveSpeedScared : moveSpeedRegular;
         
         Vector2 positionMovement = new Vector2(
-            Mathf.Cos(_rotationRads) * moveSpeed,
-            Mathf.Sin(_rotationRads) * moveSpeed
+            Mathf.Cos(_rotationRads),
+            Mathf.Sin(_rotationRads)
         );
-
-        Vector2 currentPosition = _rb.position;
-        var newPosition = currentPosition + positionMovement;
-        
-        if (IsCollision(newPosition))
-        {
-            while (IsCollision(newPosition))
-            {
-                _rotationRads += UnityEngine.Random.Range(0.0f, Mathf.PI * 2);
-                positionMovement = new Vector2(
-                    Mathf.Cos(_rotationRads) * moveSpeed,
-                    Mathf.Sin(_rotationRads) * moveSpeed
-                );
-                newPosition = currentPosition + 60 * positionMovement;
-            }
-
-            _state.AssignBumped();
-            return;
-        }
-
-        _rb.MovePosition(newPosition);
-    }
-
-    private bool IsCollision(Vector2 position)
-    {
-        return position.x < minRoamingCoords.x || position.y > minRoamingCoords.y
-                                               || position.x > maxRoamingCoords.x
-                                               || position.y < maxRoamingCoords.y;
+        _rb.velocity = positionMovement * movementSpeed;
     }
 
     private void UpdateDistanceToPlayer()
     {
-        var playerPosition = player.position;
+        var playerPosition = _player.position;
         var npcPosition = _rb.position;
         _positionOffset = npcPosition - playerPosition;
         _distanceToPlayer = Vector2.Distance(npcPosition, playerPosition);
-        //distanceToPlayer = Vector2.Distance(rb.transform.position, player.transform.position);
+        
     }
     private void UpdateState()
     {
@@ -112,9 +87,7 @@ public class NPCController : MonoBehaviour
     private class NpcState
     {
         public CurrentAction Action;
-        
         private StateTimer _state;
-
         private MovementTimer _movement;
         
         public NpcState()
@@ -124,11 +97,6 @@ public class NPCController : MonoBehaviour
             _movement = new MovementTimer();
         }
 
-        public bool IsStanding()
-        {
-            return Action == CurrentAction.BumpedStanding || Action == CurrentAction.IdleStanding;
-        }
-        
         public bool IsScared(float distanceToPlayer, float scaredRange)
         {
             return distanceToPlayer < scaredRange;
@@ -139,49 +107,40 @@ public class NPCController : MonoBehaviour
             return distanceToPlayer < concernedRange;
         }
 
-        public void AssignBumped()
-        {
-            Action = CurrentAction.BumpedStanding;
-            AssignStateTimer();
-            AssignMovementTimer();
-        }
-        
         public void Update(float distanceToPlayer, float scaredRange, float concernedRange)
         {
+
             var currentTime = Time.fixedTime;
-            if (_state.TimeEnd <= currentTime) // Update State and Rotation
+            if (_movement.TimeEnd <= currentTime) //Update Rotation
             {
-                if (Action == CurrentAction.BumpedStanding)
-                {
-                    Action = CurrentAction.BumpedWalking;
-                }
-                
-                else if (IsScared(distanceToPlayer, scaredRange))
+                if (IsScared(distanceToPlayer, scaredRange))
                 {
                     Action = CurrentAction.Scared;
+                    AssignStateTimer();
+                    AssignMovementTimer();
                 }
                 
                 else if (IsConcerned(distanceToPlayer, concernedRange))
                 {
                     Action = CurrentAction.Concerned;
+                    AssignStateTimer();
+                    AssignMovementTimer();
                 }
-                
-                else if (Action == CurrentAction.IdleStanding)
+            }
+            if (_state.TimeEnd <= currentTime) // Update State and Rotation
+            {
+                if (Action == CurrentAction.IdleWalking)
                 {
-                    Action = CurrentAction.IdleWalking;
+                    Action = CurrentAction.IdleStanding;
                 }
                 else
                 {
-                    Action = CurrentAction.IdleStanding;
+                    Action = CurrentAction.IdleWalking;
                 }
                 
                 AssignStateTimer();
                 AssignMovementTimer();
                 
-            }
-            else if (_movement.TimeEnd <= currentTime) //Update Rotation
-            {
-                AssignMovementTimer();
             }
         }
 
@@ -196,28 +155,21 @@ public class NPCController : MonoBehaviour
                     break;
 
                 case CurrentAction.IdleWalking:
-                    _state.TimeWindow = 2.0f;
+                    _state.TimeWindow = 1.0f;
                     _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
+                    _movement.IsRotated = false;
                     break;
 
                 case CurrentAction.Concerned:
                     _state.TimeWindow = 1.0f;
                     _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
+                    _movement.IsRotated = false;
                     break;
 
                 case CurrentAction.Scared:
-                    _state.TimeWindow = 1.0f;
+                    _state.TimeWindow = 2.0f;
                     _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
-                    break;
-                
-                case CurrentAction.BumpedStanding:
-                    _state.TimeWindow = 1.0f;
-                    _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
-                    break;
-                
-                case CurrentAction.BumpedWalking:
-                    _state.TimeWindow = 1.0f;
-                    _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
+                    _movement.IsRotated = false;
                     break;
                 
                 default:
@@ -228,46 +180,36 @@ public class NPCController : MonoBehaviour
         private void AssignMovementTimer()
         {
             _movement.TimeStart = Time.fixedTime;
-            switch (Action)
+            _movement.TimeWindow = _state.TimeWindow / 8;
+            _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
+            /*switch (Action)
             {
                 case CurrentAction.IdleStanding:
-                    _movement.TimeWindow = _state.TimeWindow;
+                    _movement.TimeWindow = _state.TimeWindow / 8;
                     _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
                     break;
 
                 case CurrentAction.IdleWalking:
-                    _movement.TimeWindow = _state.TimeWindow;
+                    _movement.TimeWindow = _state.TimeWindow / 8;
                     _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
                     _movement.IsRotated = false;
                     break;
 
                 case CurrentAction.Concerned:
-                    _movement.TimeWindow = _state.TimeWindow;
+                    _movement.TimeWindow = _state.TimeWindow / 8;
                     _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
                     _movement.IsRotated = false;
                     break;
 
                 case CurrentAction.Scared:
-                    _movement.TimeWindow = _state.TimeWindow;
+                    _movement.TimeWindow = _state.TimeWindow / 8;
                     _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
                     _movement.IsRotated = false;
                     break;
-                
-                case CurrentAction.BumpedStanding:
-                    _movement.TimeWindow = _state.TimeWindow;
-                    _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-                    break;
-                
-                case CurrentAction.BumpedWalking:
-                    _movement.TimeWindow = _state.TimeWindow;
-                    _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-                    break;
-                
+
                 default:
                     throw new NotImplementedException();
-            }
-
-            
+            }*/
         }
         
         public bool ShouldRotate()
@@ -296,13 +238,7 @@ public class NPCController : MonoBehaviour
 
                 case CurrentAction.Scared:
                     return Mathf.Atan2(positionOffset.y, positionOffset.x);
-                
-                case CurrentAction.BumpedWalking:
-                    throw new NotImplementedException();
-                
-                case CurrentAction.BumpedStanding:
-                    throw new NotImplementedException();
-                
+
                 default:
                     throw new NotImplementedException();
                     
@@ -348,9 +284,7 @@ public class NPCController : MonoBehaviour
         IdleStanding,
         IdleWalking,
         Concerned,
-        Scared,
-        BumpedStanding,
-        BumpedWalking,
+        Scared
     }
 }
 
