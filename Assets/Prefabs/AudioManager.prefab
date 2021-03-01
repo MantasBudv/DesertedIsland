@@ -48,7 +48,7 @@ MonoBehaviour:
   sound: {fileID: -3344141366938436554, guid: bc5820152c6df2e459139beed8ed2436, type: 2}
   sounds:
   - name: GameLoop
-    clip: {fileID: 8300000, guid: e2c55e51c5ff1224b98e898343f6ea0e, type: 3}
+    clip: {fileID: 8300000, guid: cc9c7e0b8903618439a79185c89bc55b, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
