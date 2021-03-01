@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9021217780311877562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9021217780311877556}
+  - component: {fileID: 9021217780311877563}
+  - component: {fileID: 2386786892162327901}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9021217780311877556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021217780311877562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 238.26254, y: 103.419365, z: -10.976134}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9021217780311877563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021217780311877562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e77c1caaf8656640ac9f106f1938aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 87075914203227472, guid: bc5820152c6df2e459139beed8ed2436, type: 2}
+  sound: {fileID: -3344141366938436554, guid: bc5820152c6df2e459139beed8ed2436, type: 2}
+  sounds:
+  - name: GameLoop
+    clip: {fileID: 8300000, guid: e2c55e51c5ff1224b98e898343f6ea0e, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    music: 1
+    source: {fileID: 0}
+--- !u!114 &2386786892162327901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021217780311877562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787fd353e760faa419b1f74d01d5cfe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

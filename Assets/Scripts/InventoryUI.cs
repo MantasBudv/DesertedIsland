@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    private void Awake()
+    {
+        if (!created)
+        {
+            created = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else {
+            Destroy(gameObject);
+        }
+    }
+    private static bool created = false;
     public Transform itemsParent;
     public GameObject inventoryUI;
     Inventory inventory;

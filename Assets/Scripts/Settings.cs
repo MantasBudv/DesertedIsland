@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 public class Settings : MonoBehaviour
 {
-    public GameObject box;
-    public AudioMixer AudioMixer;
+    [SerializeField]
+    private AudioMixer AudioMixer;
 
-    public void ButtonToggle()
+    private void Start()
     {
-        if (box.activeInHierarchy)
-            box.SetActive(false);
-        else box.SetActive(true);
+        float volume = 0f;
+        AudioMixer.GetFloat("Music", out volume);
+        gameObject.GetComponent<Slider>().value = volume;
     }
 
     public void SetMusic(float volume)
