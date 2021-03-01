@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: c99a07f1c80b53c4c9527ec695ca59c8
+  - enabled: 1
+    path: Assets/Scenes/UpperBeach.unity
+    guid: 656a0c4e5dc6c3145af938bc27b128f8
   m_configObjects: {}
