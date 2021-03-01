@@ -21,7 +21,10 @@ public class ItemPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PickUp();
+        if (other.tag == "Player")
+        {
+            PickUp();
+        }
     }
 
     void PickUp()
