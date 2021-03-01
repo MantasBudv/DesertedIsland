@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179230158208235359}
   - component: {fileID: 179230158208235356}
-  - component: {fileID: 179230158208235357}
+  - component: {fileID: 3078320942489687139}
   - component: {fileID: 179230158208235358}
   m_Layer: 0
   m_Name: NPC
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179230158208235354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: 0.9, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: -741219643665213747, guid: 098dea4d980e0774484795d51cd7cb97,
     type: 3}
-  m_Color: {r: 1, g: 0.040395662, b: 0, a: 1}
+  m_Color: {r: 0.2925533, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &179230158208235357
+--- !u!114 &3078320942489687139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,9 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1d2a6b3c7c92a4f93433ea3fbd4fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.1
-  concernedRange: 5
-  scaredRange: 0
+  minRoamingCoords: {x: -10, y: 5}
+  maxRoamingCoords: {x: 10, y: -5}
+  moveSpeed: 0.05
+  concernedRange: 1.5
+  scaredRange: 0.5
   player: {fileID: 0}
 --- !u!50 &179230158208235358
 Rigidbody2D:
