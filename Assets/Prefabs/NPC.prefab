@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -741219643665213747, guid: 098dea4d980e0774484795d51cd7cb97,
     type: 3}
   m_Color: {r: 0.2925533, g: 1, b: 0, a: 1}
@@ -101,6 +101,7 @@ MonoBehaviour:
   moveSpeedScared: 3
   concernedRange: 2
   scaredRange: 1
+  itemDrop: {fileID: 0}
 --- !u!50 &179230158208235358
 Rigidbody2D:
   serializedVersion: 4
