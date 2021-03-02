@@ -13,70 +13,64 @@ public class NPCControllerAgressive : MonoBehaviour
 
     [SerializeField] private float moveSpeedRegular = 2.2f;
 
-    [SerializeField] private float moveSpeedAgressive = 3f;
+    [SerializeField] private float moveSpeedAgressive = 1.5f;
 
     [SerializeField] private float concernedRange = 1.5f;
 
-    [SerializeField] private float agressiveRange = 0.5f;
+    [SerializeField] private float agressiveRange = 10f;
 
-    [SerializeField] private GameObject itemDrop;
+    [SerializeField] private GameObject aggresiveNpc;
     
     private Rigidbody2D _player;
     private Rigidbody2D _rb;
     private float _rotationRads;
     private Vector2 _positionOffset;
     private float _distanceToPlayer;
-    private NpcState _state;
+
+    private CurrentAction _action;
+    private bool _shouldRotate;
+
+    private float duplicateTimer;
     
-    private float dyingEnd;
+    public static int SplitCount = 7;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _state = new NpcState();
+        _action = CurrentAction.Agressive;
+        duplicateTimer = 0.0f;
     }
-
+    private void UpdateRotation()
+    {
+        if (_action == CurrentAction.Idle)
+        {
+            return;
+        }
+        
+        _rotationRads = Mathf.Atan2(_positionOffset.y, _positionOffset.x) + Mathf.PI;
+    }
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
     {
-        if (_state.Action != CurrentAction.Dying)
-        {
-            UpdateDistanceToPlayer();
-            UpdateState();
-            UpdateRotation();
-            UpdatePosition();
-        }
-        else
-        {
-            if (Time.fixedTime < dyingEnd) return;
-            Instantiate(itemDrop, _rb.position, Quaternion.identity);
-            gameObject.SetActive(false);
-            Destroy(gameObject);
-        }
+        UpdateDistanceToPlayer();
+        UpdateState();
+        IsDuplicate();
+        UpdateRotation();
+        UpdatePosition();
     }
-
-    private void UpdateRotation()
-    {
-        if (_state.ShouldRotate() == false)
-        {
-            return;
-        }
-        
-        _rotationRads = _state.GetRotation(_positionOffset) + UnityEngine.Random.Range(-Mathf.PI / 16, Mathf.PI / 16);
-    }
-
+    
     private void UpdatePosition()
     {
-        if (_state.Action == CurrentAction.IdleStanding)
+        if (_action == CurrentAction.Idle)
         {
             _rb.velocity = new Vector2(0.0f, 0.0f);
             return;
         }
 
-        var movementSpeed = (_state.Action == CurrentAction.Agressive) ? moveSpeedAgressive : moveSpeedRegular;
+        var movementSpeed = (_action == CurrentAction.Agressive) ? moveSpeedAgressive : moveSpeedRegular;
         
         Vector2 positionMovement = new Vector2(
             Mathf.Cos(_rotationRads),
@@ -93,216 +87,51 @@ public class NPCControllerAgressive : MonoBehaviour
         _distanceToPlayer = Vector2.Distance(npcPosition, playerPosition);
         
     }
-    private void UpdateState()
-    {
-        _state.Update(_distanceToPlayer, agressiveRange, concernedRange);
-    }
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void IsDuplicate()
     {
-        var otherObject = other.gameObject;
-        if (otherObject.CompareTag("Player") && _state.Action != CurrentAction.Dying)
+        var currentTime = Time.fixedTime;
+        if (duplicateTimer >= 2.0f)
         {
-            _state.Action = CurrentAction.Dying;
-            dyingEnd = Time.fixedTime + 2.0f;
-            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-            _rb.velocity = new Vector2(0.0f, 0.0f);
-            // foreach(var c in gameObject.GetComponentsInChildren<Collider2D>())
-            // {
-            //     if(c.isTrigger) c.enabled = false;
-            // }
-        }
-        else if (_state.Action != CurrentAction.Dying)
-        {
-            _rotationRads += Mathf.PI + UnityEngine.Random.Range(-Mathf.PI / 4, Mathf.PI / 4);
+            Duplicate();
+            duplicateTimer = 0.0f;
         }
     }
 
-    private class NpcState
+    private void Duplicate()
     {
-        public CurrentAction Action;
-        private StateTimer _state;
-        private MovementTimer _movement;
+        Debug.Log("VEIKIA");
+        if (SplitCount > 0)
+        {
+            SplitCount--;
+            var pos = _rb.position;
+            pos.y += 0.5f;
         
-        public NpcState()
-        {
-            Action = CurrentAction.IdleStanding;
-            _state = new StateTimer();
-            _movement = new MovementTimer();
-        }
-
-        public bool IsAgressive(float distanceToPlayer, float agressiveRange)
-        {
-            return distanceToPlayer < agressiveRange;
-        }
-
-        public void Update(float distanceToPlayer, float agressiveRange, float concernedRange)
-        {
-
-            var currentTime = Time.fixedTime;
-            if (_movement.TimeEnd <= currentTime) //Update Rotation
-            {
-                if (IsAgressive(distanceToPlayer, agressiveRange))
-                {
-                    Action = CurrentAction.Agressive;
-                    Debug.Log(Action);
-                    AssignStateTimer();
-                    AssignMovementTimer();
-                }
-            }
-            if (_state.TimeEnd <= currentTime) // Update State and Rotation
-            {
-                if (Action == CurrentAction.IdleWalking)
-                {
-                    Action = CurrentAction.IdleStanding;
-                }
-                else
-                {
-                    Action = CurrentAction.IdleWalking;
-                }
-                
-                AssignStateTimer();
-                AssignMovementTimer();
-                
-            }
-        }
-
-        private void AssignStateTimer()
-        {
-            _state.TimeStart = Time.fixedTime;
-            switch (Action)
-            {
-                case CurrentAction.IdleStanding:
-                    _state.TimeWindow = 2.0f;
-                    _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
-                    break;
-
-                case CurrentAction.IdleWalking:
-                    _state.TimeWindow = 1.0f;
-                    _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
-                    _movement.IsRotated = false;
-                    break;
-
-                case CurrentAction.Agressive:
-                    _state.TimeWindow = 0.001f;
-                    _state.TimeEnd = _state.TimeStart + _state.TimeWindow;
-                    _movement.IsRotated = false;
-                    break;
-                
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
-        private void AssignMovementTimer()
-        {
-            _movement.TimeStart = Time.fixedTime;
-            _movement.TimeWindow = _state.TimeWindow / 8;
-            _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-            if (CurrentAction.Agressive == Action)
-            {
-                _movement.TimeWindow = 5.0f;
-                _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-            }
-            /*switch (Action)
-            {
-                case CurrentAction.IdleStanding:
-                    _movement.TimeWindow = _state.TimeWindow / 8;
-                    _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-                    break;
-
-                case CurrentAction.IdleWalking:
-                    _movement.TimeWindow = _state.TimeWindow / 8;
-                    _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-                    _movement.IsRotated = false;
-                    break;
-
-                case CurrentAction.Concerned:
-                    _movement.TimeWindow = _state.TimeWindow / 8;
-                    _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-                    _movement.IsRotated = false;
-                    break;
-
-                case CurrentAction.Scared:
-                    _movement.TimeWindow = _state.TimeWindow / 8;
-                    _movement.TimeEnd = _movement.TimeStart + _movement.TimeWindow;
-                    _movement.IsRotated = false;
-                    break;
-
-                default:
-                    throw new NotImplementedException();
-            }*/
-        }
-        
-        public bool ShouldRotate()
-        {
-            if (_movement.IsRotated == false)
-            {
-                _movement.IsRotated = true;
-                return true;
-            }
-            
-            return false;
-        }
-
-        public float GetRotation(Vector2 positionOffset)
-        {
-            switch (Action)
-            {
-                case CurrentAction.IdleStanding:
-                    throw new NotImplementedException();
-
-                case CurrentAction.IdleWalking:
-                    return Random.Range(0.0f, 2 * Mathf.PI);
-
-                case CurrentAction.Agressive:
-                    return Mathf.Atan2(positionOffset.y, positionOffset.x) + Mathf.PI;
-
-                default:
-                    throw new NotImplementedException();
-                    
-            }
-            
+            Instantiate(aggresiveNpc, pos, Quaternion.identity);
         }
     }
-
-    private class StateTimer
+    
+    public bool IsAgressive()
     {
-        public float TimeStart;
-        public float TimeWindow;
-        public float TimeEnd;
-
-        public StateTimer()
-        {
-            TimeStart = 0f;
-            TimeWindow = 0f;
-            TimeEnd = 0f;
-        }
+        return _distanceToPlayer < agressiveRange;
     }
-
-    private class MovementTimer
+    
+    public void UpdateState()
     {
-        public float TimeStart;
-        public float TimeWindow;
-        public float TimeEnd;
-
-        public bool IsRotated;
-        
-        public MovementTimer()
+        if (IsAgressive())
         {
-            TimeStart = 0f;
-            TimeWindow = 0f;
-            TimeEnd = 0f;
-
-            IsRotated = true;
+            _action = CurrentAction.Agressive;
+            duplicateTimer += Time.deltaTime;
+        }
+        else
+        {
+            _action = CurrentAction.Idle;
+            duplicateTimer = 0.0f;
         }
     }
-
     private enum CurrentAction
     {
-        IdleStanding,
-        IdleWalking,
+        Idle,
         Agressive,
-        Dying
     }
 }

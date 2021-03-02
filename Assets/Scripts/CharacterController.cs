@@ -1,5 +1,6 @@
 ﻿using UnityEngine.EventSystems;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CharacterController : MonoBehaviour
     public float movementSpeed;
     public Animator animator;
     private Vector2 moveDir;
+    public GameObject gameOver;
 
     private void Awake() 
     {
@@ -48,5 +50,15 @@ public class CharacterController : MonoBehaviour
         }
        
         animator.SetFloat("Speed", movementSpeed);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Skeleton")
+        {
+            Time.timeScale = 0f;
+            gameObject.SetActive(false);
+            Debug.Log("You died");
+            gameOver.SetActive(true);
+        }
     }
 }
