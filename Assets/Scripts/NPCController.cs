@@ -30,6 +30,8 @@ public class NPCController : MonoBehaviour
     
     private float dyingEnd;
 
+    public static int splitTimes = 4;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
