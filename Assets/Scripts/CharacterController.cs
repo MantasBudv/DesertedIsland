@@ -1,4 +1,5 @@
 ﻿using UnityEngine.EventSystems;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,4 +62,5 @@ public class CharacterController : MonoBehaviour
             gameOver.SetActive(true);
         }
     }
+    
 }
