@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -9,21 +7,19 @@ public class Settings : MonoBehaviour
 {
     [SerializeField]
     private AudioMixer AudioMixer;
+    [SerializeField]
+    private string SliderName;
 
     private void Start()
     {
         float volume = 0f;
-        AudioMixer.GetFloat("Music", out volume);
+        AudioMixer.GetFloat(SliderName, out volume);
         gameObject.GetComponent<Slider>().value = volume;
     }
 
-    public void SetMusic(float volume)
+    public void SetVolume(float volume)
     {
-        AudioMixer.SetFloat("Music", volume);
-    }
-    public void SetSounds(float volume)
-    {
-        AudioMixer.SetFloat("Sounds", volume);
+        AudioMixer.SetFloat(SliderName, volume);
     }
 
 }
