@@ -11,7 +11,7 @@ public class HotbarItem : ScriptableObject
     public bool active = false;
     public virtual void SetActive (bool value) 
     {
-        Debug.Log("Setting " + name + " active");
+        //Debug.Log("Setting " + name + " " + value);
         active = value;
     }
 }
