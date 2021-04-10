@@ -27,6 +27,7 @@ public class CharacterFootsteps : MonoBehaviour
             Debug.Log("Walking");
             
             Instantiate(footstep, gameObject.transform.position - offset, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Footstep");
 
         }
 
