@@ -599,71 +599,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Night.a
-      value: 0.80784315
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Night.b
-      value: 0.1792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Night.g
-      value: 0.026210396
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Night.r
-      value: 0.05771761
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: timeStart
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening1.a
-      value: 0.16470589
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening1.b
-      value: 0.14901961
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening1.g
-      value: 0.12156863
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening1.r
-      value: 0.49411765
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening2.a
-      value: 0.4117647
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening2.b
-      value: 0.26415092
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening2.g
-      value: 0.06354573
-      objectReference: {fileID: 0}
-    - target: {fileID: 193085313090448480, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: Evening2.r
-      value: 0.10742812
-      objectReference: {fileID: 0}
     - target: {fileID: 215123139717700960, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1998,31 +1933,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8681134744967192691, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.80784315
-      objectReference: {fileID: 0}
-    - target: {fileID: 8681134744967192691, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.1792453
-      objectReference: {fileID: 0}
-    - target: {fileID: 8681134744967192691, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.026210396
-      objectReference: {fileID: 0}
-    - target: {fileID: 8681134744967192691, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.05771761
-      objectReference: {fileID: 0}
-    - target: {fileID: 8681134744967192691, guid: b8ff438da6c11f346aca117c4361055c,
-        type: 3}
-      propertyPath: m_Maskable
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8763514177660149484, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
