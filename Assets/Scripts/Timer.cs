@@ -8,7 +8,9 @@ public class Timer : MonoBehaviour
 {
     public UnityEngine.UI.Image img;
     public float timeStart;
+    public int day;
     public Text textBox;
+    public Text textBox2;
     public Color Morning;
     public Color Morning2;
     public Color Noon;
@@ -18,18 +20,24 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textBox.text = TimeSpan.FromMinutes(360).ToString(@"hh\:mm");
+        textBox.text = TimeSpan.FromMinutes(timeStart).ToString(@"hh\:mm");
+        textBox2.text = "Day " + day.ToString();
     }
 
     // Update is called once per frame
     void Update()
     { 
-        timeStart += Time.deltaTime;
-        Debug.Log(Mathf.Round(timeStart));
-
-        textBox.text =TimeSpan.FromMinutes(Mathf.Round(timeStart)).ToString(@"hh\:mm");
-
+        
+        timeStart += Time.deltaTime*5;
+        Debug.Log(Mathf.Round(timeStart/10)*10);
+        textBox.text =TimeSpan.FromMinutes(Mathf.Round(timeStart/10)*10).ToString(@"hh\:mm");
         changeSky();
+        if(Mathf.Round(timeStart/10)*10 == 1440){
+            timeStart = 0;
+            day++;
+            textBox2.text = "Day " + day.ToString();
+        }
+
     }
 
     void changeSky()
