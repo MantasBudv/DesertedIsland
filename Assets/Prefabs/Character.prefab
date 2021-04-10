@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: -5727286518397389663}
   - component: {fileID: 6317059563632731757}
   - component: {fileID: 6387828302328154131}
+  - component: {fileID: 2134013230228635898}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -179,10 +180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546e0ec8530f06745a267ee694bf4d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BASE_movementSpeed: 1
+  BASE_MOVE_SPEED: 3.5
   rb: {fileID: 6317059563632731757}
   movementSpeed: 5
   animator: {fileID: 3762885527640912623}
+  gameOver: {fileID: 0}
 --- !u!50 &6317059563632731757
 Rigidbody2D:
   serializedVersion: 4
@@ -220,3 +222,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.000000029802322, y: 0.093678564}
   m_Size: {x: 0.50870067, y: 0.9156386}
   m_Direction: 0
+--- !u!114 &2134013230228635898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8560338553462729543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff848aa4bf6d6845b943b075b72f41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstep: {fileID: 6674602756997330689, guid: 357e9a06f2e50b34cb3350fb10b9acfc,
+    type: 3}
