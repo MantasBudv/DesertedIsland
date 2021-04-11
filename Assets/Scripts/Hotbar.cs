@@ -29,6 +29,10 @@ public class Hotbar : MonoBehaviour
     }
     void UpdateActiveValues()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            slots[0].upgradeItem(1);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             setActiveSlot(0);

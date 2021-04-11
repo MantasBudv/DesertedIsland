@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   name: Axe
-  icon: {fileID: -1025951174003558675, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  icon:
+  - {fileID: -1025951174003558675, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 3193039239326454919, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
   level: 0
   key: 2
   active: 0

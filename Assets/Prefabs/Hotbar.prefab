@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2901961, g: 0.15686275, b: 0.19215688, a: 1}
+  m_Color: {r: 0.2901961, g: 0.15686275, b: 0.19215688, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -573,6 +573,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404058249427601753}
     m_Modifications:
+    - target: {fileID: 623358405437455091, guid: c8ddf250b54c2104c92811f724d0c2af,
+        type: 3}
+      propertyPath: icon.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3485100509549022424, guid: c8ddf250b54c2104c92811f724d0c2af,
         type: 3}
       propertyPath: m_Name

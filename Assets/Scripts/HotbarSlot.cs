@@ -12,7 +12,7 @@ public class HotbarSlot : MonoBehaviour
     {
         item.level = level;
         // change item.icon
-        icon.sprite = item.icon;
+        icon.sprite = item.icon[level];
         icon.enabled = true;
     }
     public void SetActive()

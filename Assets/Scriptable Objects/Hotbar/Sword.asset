@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   name: Sword
-  icon: {fileID: -8644889942409211090, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
-  level: 0
+  icon:
+  - {fileID: -8644889942409211090, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 2451002373052964623, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  level: 1
   key: 1
-  active: 0
+  active: 1

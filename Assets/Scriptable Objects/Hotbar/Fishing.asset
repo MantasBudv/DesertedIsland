@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Fishing
   m_EditorClassIdentifier: 
   name: Fishing
-  icon: {fileID: 8108322230764480391, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  icon:
+  - {fileID: 8956002981994491068, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 0}
   level: 0
   key: 4
   active: 0
