@@ -563,6 +563,11 @@ MonoBehaviour:
   movementSpeed: 5
   animator: {fileID: 3762885527640912623}
   gameOver: {fileID: 0}
+  maxHealth: 5
+  healthBar: {fileID: 0}
+  maxStamina: 100
+  staminaBar: {fileID: 0}
+  staminaRegenTime: 0.25
 --- !u!50 &6317059563632731757
 Rigidbody2D:
   serializedVersion: 4
