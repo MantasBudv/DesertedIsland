@@ -26,6 +26,18 @@ public class ActiveWeapon : MonoBehaviour
     void Update()
     {
         setActiveWeapon();
+        updateSprites();
+    }
+    void updateSprites() {
+        foreach (GameObject weaponUI in weaponsUI) {
+            foreach (HotbarItem weapon in weapons)
+            {
+                if (weaponUI.name == weapon.name && weapon.active == true)
+                {
+                    weaponUI.GetComponent<SpriteRenderer>().sprite = weapon.icon[weapon.level];
+                }
+            }
+        }
     }
     void setActiveWeapon() 
     {

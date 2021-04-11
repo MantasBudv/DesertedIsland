@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
   name: Pickaxe
-  icon: {fileID: 3193039239326454919, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  icon:
+  - {fileID: 51363136116004566, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 0}
   level: 0
   key: 3
-  active: 1
+  active: 0
