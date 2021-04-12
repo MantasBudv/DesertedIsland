@@ -15,7 +15,7 @@ public class NPCControllerAgressive : MonoBehaviour
 
     [SerializeField] private float moveSpeedAgressive = 1.5f;
 
-    [SerializeField] private float concernedRange = 1.5f;
+    //[SerializeField] private float concernedRange = 1.5f;
 
     [SerializeField] private float agressiveRange = 10f;
 

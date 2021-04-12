@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Item
   - Skeleton
+  - Friendly
+  - Interactable
   layers:
   - Default
   - TransparentFX
