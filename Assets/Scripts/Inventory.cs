@@ -59,4 +59,34 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
         }
     }
+
+    public List<Item> GetItems()
+    {
+        return items;
+    }
+
+    public List<int> GetItemsQuant()
+    {
+        return itemsQuantity;
+    }
+
+    public void LoadInventory(List<Item> items, List<int> quant)
+    {
+        items.Clear();
+        itemsQuantity.Clear();
+
+        foreach (var i in items)
+        {
+            items.Add(i);
+        }
+
+        foreach (var i in quant)
+        {
+            itemsQuantity.Add(i);
+        }
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+    }
+
 }

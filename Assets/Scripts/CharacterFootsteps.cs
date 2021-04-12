@@ -24,7 +24,7 @@ public class CharacterFootsteps : MonoBehaviour
         if ((rb.velocity != Vector2.zero) && (Time.time > NextStep))
         {
             NextStep = Time.time + StepRate;
-            Debug.Log("Walking");
+            //Debug.Log("Walking");
             
             Instantiate(footstep, gameObject.transform.position - offset, Quaternion.identity);
             FindObjectOfType<AudioManager>().Play("Footstep");

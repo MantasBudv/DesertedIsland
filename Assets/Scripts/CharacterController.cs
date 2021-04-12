@@ -118,6 +118,26 @@ public class CharacterController : MonoBehaviour
         
     }
 
+
+    public int getCurrHP()
+    {
+        return currentHealth;
+    }
+
+    public void LoadStats(int maxHP, int currHP, int maxSTA, int currSTA)
+    {
+        maxHealth = maxHP;
+        currentHealth = currHP;
+
+        maxStamina = maxSTA;
+        currentStamina = currSTA;
+
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+        staminaBar.SetMaxStamina(maxStamina);
+        staminaBar.SetStamina(currentStamina);
+    }
+
     //Stamina
 
     void ReduceStamina()
@@ -133,5 +153,11 @@ public class CharacterController : MonoBehaviour
             staminaBar.SetStamina(++currentStamina);
         }
     }
+
+    public int getCurrSTA()
+    {
+        return currentStamina;
+    }
+
 
 }

@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
     { 
         
         timeStart += Time.deltaTime*speed;
-        Debug.Log(Mathf.Round(timeStart/10)*10);
+        //Debug.Log(Mathf.Round(timeStart/10)*10);
         textBox.text = TimeSpan.FromMinutes(Mathf.Round(timeStart/10)*10).ToString(@"hh\:mm");
         changeSky();
         if(Mathf.Round(timeStart/10)*10 == 1440){
@@ -44,6 +44,18 @@ public class Timer : MonoBehaviour
             textBox2.text = "Day " + day.ToString();
         }
 
+    }
+
+    public void GetTime(out float time, out int currDay)
+    {
+        time = timeStart;
+        currDay = day;
+    }
+
+    public void SetTime(float Time, int Day)
+    {
+        timeStart = Time;
+        day = Day;
     }
 
     void changeSky()

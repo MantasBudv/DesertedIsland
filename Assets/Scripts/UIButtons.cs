@@ -17,7 +17,7 @@ public class UIButtons : MonoBehaviour
     public void StartButton()
     {
         newgame = true;
-        SceneManager.LoadScene("LowerBeach");
+        SceneManager.LoadScene("GintasDEMO");
     }
 
     public void ExitGame()
