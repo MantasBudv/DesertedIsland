@@ -48,11 +48,18 @@ MonoBehaviour:
   sound: {fileID: -3344141366938436554, guid: bc5820152c6df2e459139beed8ed2436, type: 2}
   sounds:
   - name: GameLoop
-    clip: {fileID: 8300000, guid: cc9c7e0b8903618439a79185c89bc55b, type: 3}
+    clip: {fileID: 8300000, guid: 8eb936fc2cfb6b542a0f4891ca868ee5, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
     music: 1
+    source: {fileID: 0}
+  - name: Footstep
+    clip: {fileID: 8300000, guid: 1726ad384dc701349abc140d9e85c6aa, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    music: 0
     source: {fileID: 0}
 --- !u!114 &2386786892162327901
 MonoBehaviour:

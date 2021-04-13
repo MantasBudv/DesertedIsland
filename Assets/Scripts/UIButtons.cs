@@ -7,9 +7,16 @@ public class UIButtons : MonoBehaviour
 {
     [SerializeField]
     private string sceneName;
+    public static bool newgame;
 
     public void ChangeScene()
     {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void StartButton()
+    {
+        newgame = true;
         SceneManager.LoadScene(sceneName);
     }
 

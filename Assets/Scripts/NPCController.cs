@@ -30,6 +30,8 @@ public class NPCController : MonoBehaviour
     
     private float dyingEnd;
 
+    public static int splitTimes = 4;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -105,11 +107,12 @@ public class NPCController : MonoBehaviour
         {
             _state.Action = CurrentAction.Dying;
             dyingEnd = Time.fixedTime + 2.0f;
+            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             _rb.velocity = new Vector2(0.0f, 0.0f);
-            foreach(var c in gameObject.GetComponentsInChildren<Collider2D>())
-            {
-                if(c.isTrigger) c.enabled = false;
-            }
+            // foreach(var c in gameObject.GetComponentsInChildren<Collider2D>())
+            // {
+            //     if(c.isTrigger) c.enabled = false;
+            // }
         }
         else if (_state.Action != CurrentAction.Dying)
         {

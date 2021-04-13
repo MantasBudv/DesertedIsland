@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - Skeleton
+  - Friendly
+  - Interactable
+  - Weapon
+  - Throwable
   layers:
   - Default
   - TransparentFX
