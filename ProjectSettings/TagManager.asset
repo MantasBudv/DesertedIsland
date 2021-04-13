@@ -8,6 +8,8 @@ TagManager:
   - Skeleton
   - Friendly
   - Interactable
+  - Weapon
+  - Throwable
   layers:
   - Default
   - TransparentFX

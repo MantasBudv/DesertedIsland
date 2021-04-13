@@ -100,7 +100,6 @@ public class NPCControllerAgressive : MonoBehaviour
 
     private void Duplicate()
     {
-        Debug.Log("VEIKIA");
         if (SplitCount > 0)
         {
             SplitCount--;
@@ -133,5 +132,18 @@ public class NPCControllerAgressive : MonoBehaviour
     {
         Idle,
         Agressive,
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Weapon"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Throwable"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
