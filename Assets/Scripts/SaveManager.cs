@@ -69,6 +69,8 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.currHP = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().getCurrHP();
         instance.activeSave.maxSTA = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().maxStamina;
         instance.activeSave.currSTA = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().getCurrSTA();
+        instance.activeSave.currSkills =
+            CharacterController.skills.Copy();
         //instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                 //Inventory (need to change how items
         //instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();                          work first)
         audioMixer.GetFloat("Music", out instance.activeSave.musicVol);                             //Music volume
@@ -110,7 +112,7 @@ public class SaveManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").transform.position = instance.activeSave.playerPosition;
         GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().LoadStats(instance.activeSave.maxHP, instance.activeSave.currHP,
-                                                             instance.activeSave.maxSTA, instance.activeSave.currSTA);
+                                                             instance.activeSave.maxSTA, instance.activeSave.currSTA, instance.activeSave.currSkills);
         //FindObjectOfType<Inventory>().LoadInventory(instance.activeSave.inventory, instance.activeSave.invQuant);
         audioMixer.SetFloat("Music", instance.activeSave.musicVol);
         audioMixer.SetFloat("Sounds", instance.activeSave.soundVol);
@@ -159,6 +161,7 @@ public class SaveData
     public float timer;    
     public int dayCount;
     public float musicVol, soundVol;
-    
+
+    public bool[] currSkills;
 
 }
