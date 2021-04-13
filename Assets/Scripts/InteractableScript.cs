@@ -41,14 +41,6 @@ public class InteractableScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player") && Input.GetButton("Interact"))
-        {
-            Debug.Log("Interact veikia?");
-        }
-    }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -61,7 +53,7 @@ public class InteractableScript : MonoBehaviour
 
     private void Update()
     {
-        if (_playerInRange && Input.GetButton("Interact"))
+        if (_playerInRange && Input.GetKey(KeyCode.E))
         {
             if (_playerIsInteracting == true)
             {

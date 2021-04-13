@@ -1,4 +1,5 @@
-﻿using UnityEngine.EventSystems;
+﻿using System;
+using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class CharacterController : MonoBehaviour
     [Space(10)]
 
     [Header("Health")]
+    public static AcquiredSkills skills;
     public int maxHealth;
     private static int currentHealth;
     public HealthBar healthBar;
@@ -53,6 +55,8 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         camera = Camera.main;
+        if (skills == null)
+            skills = new AcquiredSkills();
         if (UIButtons.newgame)
         {
             currentHealth = maxHealth;
@@ -63,7 +67,6 @@ public class CharacterController : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         staminaBar.SetMaxStamina(maxStamina);
         staminaBar.SetStamina(currentStamina);
-
         InvokeRepeating("RegenStamina", staminaRegenTime, staminaRegenTime);
     }
 
@@ -172,14 +175,15 @@ public class CharacterController : MonoBehaviour
         return currentHealth;
     }
 
-    public void LoadStats(int maxHP, int currHP, int maxSTA, int currSTA)
+    public void LoadStats(int maxHP, int currHP, int maxSTA, int currSTA, bool[] currSkills)
     {
         maxHealth = maxHP;
         currentHealth = currHP;
 
         maxStamina = maxSTA;
         currentStamina = currSTA;
-
+        skills = new AcquiredSkills(currSkills);
+        //Debug.Log(skills.HasAcquired(AcquiredSkills.SkillEnum.StaminaRegen));
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
         staminaBar.SetMaxStamina(maxStamina);
@@ -198,6 +202,10 @@ public class CharacterController : MonoBehaviour
     {
         if (currentStamina != maxStamina)
         {
+            if (skills.HasAcquired(AcquiredSkills.SkillEnum.StaminaRegen))
+            {
+                currentStamina += 10;
+            }
             staminaBar.SetStamina(++currentStamina);
         }
     }
@@ -218,4 +226,63 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public class AcquiredSkills
+    {
+        static int size = 1;
+        public bool[] _hasAcquired;
+        public AcquiredSkills()
+        {
+            _hasAcquired = new bool[size];
+        }
+
+        public AcquiredSkills(bool[] acquired)
+        {
+            _hasAcquired = new bool[size];
+            for (int i = 0; i < size; i++)
+            {
+                _hasAcquired[i] = acquired[i];
+            }
+        }
+        public enum SkillEnum
+        {
+            StaminaRegen
+        }
+
+        public void SetSkill(SkillEnum skill)
+        {
+            switch (skill)
+            {
+                case SkillEnum.StaminaRegen:
+                    _hasAcquired[0] = true;
+                    break;
+                default:
+                    Debug.Log("Error");
+                    break;
+            }
+        }
+
+        public bool HasAcquired(SkillEnum skill)
+        {
+            switch (skill)
+            {
+                case SkillEnum.StaminaRegen:
+                    return _hasAcquired[0];
+                default:
+                    Debug.Log("Error");
+                    return false;
+            }
+        }
+
+        public bool[] Copy()
+        {
+            bool[] copy = new bool[size];
+            for (int i = 0; i < size; i++)
+            {
+                copy[i] = _hasAcquired[i];
+            }
+            return copy;
+        }
+
+    }
 }
+

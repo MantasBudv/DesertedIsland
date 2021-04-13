@@ -17,11 +17,4 @@ public class ThrowableController : MonoBehaviour
         if (timer < 0)
             Destroy(gameObject);
     }
-    private void OnTriggerEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag != "Player")
-        {
-            Destroy(gameObject);
-        }
-    }
 }
