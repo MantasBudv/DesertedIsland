@@ -22,7 +22,6 @@ public class Timer : MonoBehaviour
     public Color Night;
     public static Timer instance;
 
-    // Start is called before the first frame update
     void Start()
     {
         textBox.text = TimeSpan.FromMinutes(timeStart).ToString(@"hh\:mm");
@@ -30,10 +29,8 @@ public class Timer : MonoBehaviour
         textBox2.text = "Day " + day.ToString();
     }
 
-    // Update is called once per frame
     void Update()
     { 
-        
         timeStart += Time.deltaTime*speed;
         //Debug.Log(Mathf.Round(timeStart/10)*10);
         textBox.text = TimeSpan.FromMinutes(Mathf.Round(timeStart/10)*10).ToString(@"hh\:mm");
