@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class InteractableScript : MonoBehaviour
 {
     [SerializeField] private GameObject miniGame;
-    [SerializeField] private GameObject itemDrop;
+    [SerializeField] private Item itemDrop;
     
     private GameObject _highlighting;
     private GameObject _outerLayer;
@@ -61,7 +62,14 @@ public class InteractableScript : MonoBehaviour
                 _innerLayer.gameObject.transform.localScale = new Vector3(_timer, _timer, 1);
                 if (_timer >= 1)
                 {
-                    Instantiate(itemDrop, _rb.position, Quaternion.identity);
+                    //Instantiate(itemDrop, _rb.position, Quaternion.identity);
+
+                    int amount = Random.Range(2, 5);
+                    for (int i = 0; i < amount; i++)
+                    {
+                        bool wasPickedUp = Inventory.instance.Add(itemDrop);
+                    }
+
                     gameObject.SetActive(false);
                     Destroy(gameObject);
                 }
