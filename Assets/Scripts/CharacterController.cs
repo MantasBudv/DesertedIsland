@@ -189,7 +189,6 @@ public class CharacterController : MonoBehaviour
         staminaBar.SetMaxStamina(maxStamina);
         staminaBar.SetStamina(currentStamina);
     }
-
     //Stamina
 
     void ReduceStamina()
@@ -209,7 +208,15 @@ public class CharacterController : MonoBehaviour
             staminaBar.SetStamina(++currentStamina);
         }
     }
-
+ 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("EnemyThrowable"))
+        {
+            Destroy(other.gameObject);
+            TakeDamage(1);
+        }
+    }
     public int getCurrSTA()
     {
         return currentStamina;
