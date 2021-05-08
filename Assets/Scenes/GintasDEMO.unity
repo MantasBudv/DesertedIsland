@@ -121,6 +121,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &143893657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 682944481861465044, guid: b8ff438da6c11f346aca117c4361055c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1824739913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &143893663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143893657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793e4cc45f1b85044a0d98891d20be51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Sword
+  icon:
+  - {fileID: -8644889942409211090, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 2451002373052964623, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  level: 0
+  key: 0
+  active: 0
 --- !u!1001 &155841524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146,6 +171,11 @@ PrefabInstance:
     - target: {fileID: 3451716473277565531, guid: 02c6ec311e25d4f4eb7dba78766fd6f8,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648735082201918007, guid: 02c6ec311e25d4f4eb7dba78766fd6f8,
+        type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5754384840886527574, guid: 02c6ec311e25d4f4eb7dba78766fd6f8,
@@ -839,6 +869,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac475233cf5ca34d814673b1ce2c350, type: 3}
+--- !u!1 &965661544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 215123139717700961, guid: b8ff438da6c11f346aca117c4361055c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1824739913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &965661550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965661544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793e4cc45f1b85044a0d98891d20be51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Axe
+  icon:
+  - {fileID: -1025951174003558675, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 3193039239326454919, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  level: 0
+  key: 1
+  active: 0
 --- !u!1 &980949494
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +967,31 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1170828141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5409416016123652024, guid: b8ff438da6c11f346aca117c4361055c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1824739913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1170828147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170828141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793e4cc45f1b85044a0d98891d20be51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Pickaxe
+  icon:
+  - {fileID: 51363136116004566, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 0}
+  level: 0
+  key: 3
+  active: 0
 --- !u!1001 &1218549599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1131,6 +1211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377741502, guid: b8ff438da6c11f346aca117c4361055c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 215123139717700960, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1341,6 +1425,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1321319750118197230, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 2038161273}
     - target: {fileID: 1549233601068048758, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1621,6 +1710,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3567206302134552063, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 143893663}
     - target: {fileID: 3635241882150613565, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_Name
@@ -1821,6 +1915,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4181389956763003722, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 965661550}
     - target: {fileID: 4339844989796011301, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2376,6 +2475,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8352231640381149587, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1170828147}
     - target: {fileID: 8406867990432011335, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2646,6 +2750,31 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000076293945, y: -0.0000076293945}
   m_SizeDelta: {x: 345.20203, y: 43.150253}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2038161267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3075193388235583941, guid: b8ff438da6c11f346aca117c4361055c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1824739913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2038161273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038161267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793e4cc45f1b85044a0d98891d20be51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Fishing
+  icon:
+  - {fileID: 8956002981994491068, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 0}
+  level: 0
+  key: 0
+  active: 0
 --- !u!1001 &3986073954913682270
 PrefabInstance:
   m_ObjectHideFlags: 0

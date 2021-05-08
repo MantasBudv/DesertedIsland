@@ -89,12 +89,12 @@ public class Inventory : MonoBehaviour
         return itemsQuantity;
     }
 
-    public void LoadInventory(List<Item> items, List<int> quant)
+    public void LoadInventory(List<Item> itemsL, List<int> quant)
     {
         items.Clear();
         itemsQuantity.Clear();
 
-        foreach (var i in items)
+        foreach (var i in itemsL)
         {
             items.Add(i);
         }

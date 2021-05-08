@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Hotbar/Item")]
-public class HotbarItem : ScriptableObject
+public class HotbarItem : MonoBehaviour
 {
     new public string name = "New Item";
     public List<Sprite> icon = new List<Sprite>();
