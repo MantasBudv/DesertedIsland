@@ -7,14 +7,18 @@ public class InventorySlot : MonoBehaviour
     public Transform itemName;
     public GameObject itemCountBackground;
     public Transform itemCount;
+    private Sprite[] tempSprite;
+   
 
     
     Item item;
     public void AddItem(Item newItem)
     {
         item = newItem;
-        icon.sprite = item.icon;
+        //icon.sprite = item.icon;
         itemName.GetComponent<TMPro.TextMeshProUGUI>().text = item.name;
+        tempSprite = Resources.LoadAll<Sprite>("ItemSprites/Original_items");
+        icon.sprite = tempSprite[item.indexOnSheet];
         icon.enabled = true;
         itemNameBackground.SetActive(true);
     }

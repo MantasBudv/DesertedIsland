@@ -51,12 +51,21 @@ public class Inventory : MonoBehaviour
         }
         return true;
     }
-    public void Remove (Item item) 
+    public void Remove (string name) 
     {
-        items.Remove(item);
-        if (onItemChangedCallback != null)
-        {
-            onItemChangedCallback.Invoke();
+        Item itemToRemove = items.Find(item => item.name == name);
+        if (itemToRemove) {
+            int index = items.FindIndex(i => itemToRemove.Equals(i));
+            if (itemsQuantity[index] != 1) {
+                itemsQuantity[index]--;
+            } else {
+                items.RemoveAt(index);
+                itemsQuantity.RemoveAt(index);
+            }
+            if (onItemChangedCallback != null)
+            {
+                onItemChangedCallback.Invoke();
+            }
         }
     }
 
@@ -65,17 +74,27 @@ public class Inventory : MonoBehaviour
         return items;
     }
 
+    public bool CheckIfItemExists(string name) {
+        bool exists = false;
+        GetItems().ForEach(item => {
+            if (item.name == name) {
+                exists = true;
+            }
+        });
+        return exists;
+    }
+
     public List<int> GetItemsQuant()
     {
         return itemsQuantity;
     }
 
-    public void LoadInventory(List<Item> items, List<int> quant)
+    public void LoadInventory(List<Item> itemsL, List<int> quant)
     {
         items.Clear();
         itemsQuantity.Clear();
 
-        foreach (var i in items)
+        foreach (var i in itemsL)
         {
             items.Add(i);
         }

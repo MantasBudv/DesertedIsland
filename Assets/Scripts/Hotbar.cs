@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 public class Hotbar : MonoBehaviour
 {
     public Transform itemsParent;
@@ -62,6 +63,24 @@ public class Hotbar : MonoBehaviour
             {
                 slots[i].SetActive();
             }
+        }
+    }
+
+    public List<int> GetLevels()
+    {
+        List<int> levels = new List<int>();
+        foreach (var item in slots)
+        {
+            levels.Add(item.item.level);
+        }
+        return levels;
+    }
+
+    public void SetLevels(List<int> levels)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].upgradeItem(levels[i]);
         }
     }
 }

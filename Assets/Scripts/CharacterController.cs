@@ -46,7 +46,6 @@ public class CharacterController : MonoBehaviour
     private float rangedRate = 0.3f;
     private float nextFire = 0f;
 
-
     private void Awake() 
     {
         rb = GetComponent<Rigidbody2D>();
@@ -138,7 +137,7 @@ public class CharacterController : MonoBehaviour
 
     void CheckRanged()
     {
-        if (rangedAttack && Time.time > nextFire)
+        if (rangedAttack && Time.time > nextFire && Inventory.instance.CheckIfItemExists("Shiny Rock"))
         {
             nextFire = Time.time + rangedRate;
             Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
@@ -153,6 +152,7 @@ public class CharacterController : MonoBehaviour
         GameObject projectile = Instantiate(rock, test);
         Rigidbody2D rockrb = projectile.GetComponent<Rigidbody2D>();
         rockrb.AddForce(moveDir * 6f, ForceMode2D.Impulse);
+        Inventory.instance.Remove("Shiny Rock");
     }
 
     void TakeDamage(int damage)
@@ -189,7 +189,6 @@ public class CharacterController : MonoBehaviour
         staminaBar.SetMaxStamina(maxStamina);
         staminaBar.SetStamina(currentStamina);
     }
-
     //Stamina
 
     void ReduceStamina()
@@ -209,7 +208,15 @@ public class CharacterController : MonoBehaviour
             staminaBar.SetStamina(++currentStamina);
         }
     }
-
+ 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("EnemyThrowable"))
+        {
+            Destroy(other.gameObject);
+            TakeDamage(1);
+        }
+    }
     public int getCurrSTA()
     {
         return currentStamina;
