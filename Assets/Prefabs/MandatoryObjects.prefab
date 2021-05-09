@@ -1632,6 +1632,16 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1684782842155011972}
+    - target: {fileID: 3762885527640912616, guid: cb4bbb28f296cad49bea6b55434499a6,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762885527640912616, guid: cb4bbb28f296cad49bea6b55434499a6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8560338553462729543, guid: cb4bbb28f296cad49bea6b55434499a6,
         type: 3}
       propertyPath: m_Name
