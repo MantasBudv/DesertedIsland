@@ -71,7 +71,7 @@ public class WoodcuttingMinigameController : MonoBehaviour
             gameObject.SetActive(false);
             for (int i = 0; i < collectedWood; i++)
             {
-                bool wasPickedUp = Inventory.instance.Add(itemDrop);
+                bool wasPickedUp = Inventory.instance.AddItem(itemDrop);
             }
             return;
         }

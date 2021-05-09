@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ddb6bd3f126714a8ae6423ea886f19, type: 3}
   m_Name: Stick
   m_EditorClassIdentifier: 
-  itemName: Stick
+  name: Stick
   indexOnSheet: 0

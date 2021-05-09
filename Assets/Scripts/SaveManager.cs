@@ -75,8 +75,8 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.currLevel = CharacterController.currentLevel;
         instance.activeSave.currSkillPoints = CharacterController.skillPoints;
         
-        instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                   //Inventory (need to change how items
-        instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();               //work first)
+        instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                   //Inventory
+        instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();               
         audioMixer.GetFloat("Music", out instance.activeSave.musicVol);                             //Music volume
         audioMixer.GetFloat("Sounds", out instance.activeSave.soundVol);                            //Sound volume
         FindObjectOfType<Timer>().GetTime(out instance.activeSave.timer, out instance.activeSave.dayCount); //Time

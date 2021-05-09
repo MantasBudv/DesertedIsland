@@ -83,7 +83,7 @@ public class InteractableScript : MonoBehaviour
                     int amount = Random.Range(2, 5);
                     for (int i = 0; i < amount; i++)
                     {
-                        bool wasPickedUp = Inventory.instance.Add(itemDrop);
+                        bool wasPickedUp = Inventory.instance.AddItem(itemDrop);
                     }
 
                     gameObject.SetActive(false);

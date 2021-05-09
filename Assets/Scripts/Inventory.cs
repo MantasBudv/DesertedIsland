@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour , IItemContainer
 {
     #region Singleton
     public static Inventory instance;
@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
     public List<int> itemsQuantity = new List<int>();
-    public bool Add (Item item) 
+    public bool AddItem (Item item) 
     {
         if (items.Contains(item)) 
         {
@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour
         }
         return true;
     }
-    public void Remove (string name) 
+    public void RemoveItem (string name) 
     {
         Item itemToRemove = items.Find(item => item.name == name);
         if (itemToRemove) {
@@ -74,7 +74,7 @@ public class Inventory : MonoBehaviour
         return items;
     }
 
-    public bool CheckIfItemExists(string name) {
+    public bool ContainsItem(string name) {
         bool exists = false;
         GetItems().ForEach(item => {
             if (item.name == name) {
@@ -108,4 +108,25 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
+    public bool IsFull()
+    {
+        if (items.Count == space)
+            return true;
+        else return false;
+    }
+
+    public int ItemCount(Item item)
+    {
+        if (items.Contains(item))
+        {
+            int index = items.FindIndex(i => item.Equals(i));
+            return itemsQuantity[index];
+        }
+        else return 0;
+    }
+
+    public Inventory GetInventoryInstance()
+    {
+        return instance;
+    }
 }
