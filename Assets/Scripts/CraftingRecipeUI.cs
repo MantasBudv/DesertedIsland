@@ -21,7 +21,6 @@ public class CraftingRecipeUI : MonoBehaviour
 
     private Sprite[] tempSprite;
 
-    
     public void OnCraftButtonClick()
     {
         if (craftingRecipe != null && ItemContainer != null)
@@ -55,9 +54,31 @@ public class CraftingRecipeUI : MonoBehaviour
             arrowParrent.SetSiblingIndex(slotIndex);
             slotIndex = SetSlots(craftingRecipe.Results, slotIndex);
 
+            // if (ItemContainer.HasEnoughOfItem())
+
             Button b = itemSlots[slotIndex-1].gameObject.GetComponent<Button>();
-            b.enabled = true;
+            Image[] images = itemSlots[slotIndex-1].gameObject.GetComponentsInChildren<Image>();
             b.onClick.AddListener(delegate () { OnCraftButtonClick(); });
+
+            if (craftingRecipe.CanCraft(ItemContainer))
+            {
+                if (!ItemContainer.IsFull())
+                {
+                    foreach(Image image in images)
+                    {
+                        image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+                    }
+                    b.enabled = true;
+                }
+            }
+            else
+            {
+                foreach(Image image in images)
+                {
+                    image.color = new Color(image.color.r, image.color.g, image.color.b, 0.4f);
+                }
+                b.enabled = false;
+            }
 
             for (int i = slotIndex; i < itemSlots.Length; i++)
             {

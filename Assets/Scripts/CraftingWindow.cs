@@ -22,7 +22,11 @@ public class CraftingWindow : MonoBehaviour
     private void Start()
     {
         Init();
-        
+    }
+    
+    void Update()
+    {
+        Init();
     }
     
     private void Init()
