@@ -20,6 +20,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject inventoryUI;
     Inventory inventory;
     InventorySlot[] slots;
+    [SerializeField] GameObject CraftingUIWindow;
     void Start()
     {
         inventory = Inventory.instance;
@@ -33,6 +34,12 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetButtonDown("Inventory"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+            CraftingUIWindow.SetActive(false);
+        }
+        if (Input.GetButtonDown("Crafting"))
+        {
+            CraftingUIWindow.SetActive(!CraftingUIWindow.activeSelf);
+            inventoryUI.SetActive(false);
         }
     }
     void UpdateUI()

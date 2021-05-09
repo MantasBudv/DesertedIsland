@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44deabd02e360834ab7a630345b50eb6, type: 3}
+  m_Name: StoneMace
+  m_EditorClassIdentifier: 
+  Materials:
+  - Item: {fileID: 11400000, guid: fd1bd93eaf2e09f4f9737536cfc798cf, type: 2}
+    Amount: 1
+  - Item: {fileID: 11400000, guid: 02f231282b2cebd49bfaaf3ef76fd4a7, type: 2}
+    Amount: 1
+  Results:
+  - Item: {fileID: 11400000, guid: c6f5160ba91b6204898ee1d3e7866e71, type: 2}
+    Amount: 1
