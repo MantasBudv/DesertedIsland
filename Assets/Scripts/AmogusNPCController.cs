@@ -124,9 +124,7 @@ public class AmogusNPCController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        print(_rb.velocity);
         UpdateDistanceToPlayer();
-        Debug.Log(_action);
         switch (_action)
         {
             case CurrentAction.Dying:

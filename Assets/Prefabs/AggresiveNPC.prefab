@@ -97,11 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56ba9a5eaeecb04ba8c33a10d754c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedRegular: 2.2
+  moveSpeedAttacking: 2.2
   moveSpeedAgressive: 1
-  concernedRange: 1.5
   agressiveRange: 5
+  attackRange: 0.9
   aggresiveNpc: {fileID: 179230158208235354}
+  anim: {fileID: 0}
 --- !u!50 &179230158208235358
 Rigidbody2D:
   serializedVersion: 4

@@ -14,6 +14,7 @@ public class InteractableScript : MonoBehaviour
     private GameObject _innerLayer;
     private bool _playerInRange;
     private bool _playerIsInteracting;
+    
 
     private float _timer;
     private Rigidbody2D _rb;
