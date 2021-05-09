@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - Weapon
   - Throwable
+  - EnemyThrowable
   layers:
   - Default
   - TransparentFX

@@ -33,6 +33,7 @@ public class SkillMenuUI : MonoBehaviour
     private void ExitSkillMenu()
     {
         skillMenuUI.SetActive(false);
+        WoodcuttingMinigameController.InactivityTimer = 0.5f;
         Time.timeScale = 1f;
         GameIsSkillMenu = false;
     }

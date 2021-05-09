@@ -203,7 +203,7 @@ public class CharacterController : MonoBehaviour
         {
             if (skills.HasAcquired(AcquiredSkills.SkillEnum.StaminaRegen))
             {
-                currentStamina += 10;
+                currentStamina += 4;
             }
             staminaBar.SetStamina(++currentStamina);
         }
