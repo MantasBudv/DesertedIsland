@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 3648735082201918005}
   - component: {fileID: 3648735082201918004}
   - component: {fileID: 3648735082201918007}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TimeOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1390,7 +1390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7173086145119272460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.80999947, y: 1.5817599, z: 0}
+  m_LocalPosition: {x: 0, y: 2.9717598, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7173086146418048963}
@@ -1632,6 +1632,12 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1684782842155011972}
+    - target: {fileID: -5727286518397389663, guid: cb4bbb28f296cad49bea6b55434499a6,
+        type: 3}
+      propertyPath: XPDropComponent
+      value: 
+      objectReference: {fileID: 5702256206394724108, guid: 615e3f93f6d3b3a4992fe56e3e4eea8f,
+        type: 3}
     - target: {fileID: 3762885527640912616, guid: cb4bbb28f296cad49bea6b55434499a6,
         type: 3}
       propertyPath: m_Size.x
@@ -1641,6 +1647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963176481180819743, guid: cb4bbb28f296cad49bea6b55434499a6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pickaxe
       objectReference: {fileID: 0}
     - target: {fileID: 8560338553462729543, guid: cb4bbb28f296cad49bea6b55434499a6,
         type: 3}
@@ -1660,12 +1671,12 @@ PrefabInstance:
     - target: {fileID: 8913697486274653060, guid: cb4bbb28f296cad49bea6b55434499a6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.66
+      value: 12.47
       objectReference: {fileID: 0}
     - target: {fileID: 8913697486274653060, guid: cb4bbb28f296cad49bea6b55434499a6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3
+      value: 5.69
       objectReference: {fileID: 0}
     - target: {fileID: 8913697486274653060, guid: cb4bbb28f296cad49bea6b55434499a6,
         type: 3}

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class InteractableScript : MonoBehaviour
@@ -23,6 +24,17 @@ public class InteractableScript : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        SceneManager.sceneLoaded += LookForpickaxe;
+        pickaxe = GameObject.FindGameObjectWithTag("Pickaxe");
+    }
+
+    private void LookForpickaxe(Scene scene, LoadSceneMode mode)
+    {
+        pickaxe = GameObject.FindGameObjectWithTag("Pickaxe");
     }
 
     private void OnEnable()
@@ -65,11 +77,13 @@ public class InteractableScript : MonoBehaviour
                 if (_timer >= 1)
                 {
                     //Instantiate(itemDrop, _rb.position, Quaternion.identity);
-
+                    var Character = GameObject.FindGameObjectWithTag("Player");
+                    Character.GetComponent<CharacterController>().GiveXP(80);
+                    
                     int amount = Random.Range(2, 5);
                     for (int i = 0; i < amount; i++)
                     {
-                        bool wasPickedUp = Inventory.instance.Add(itemDrop);
+                        bool wasPickedUp = Inventory.instance.AddItem(itemDrop);
                     }
 
                     gameObject.SetActive(false);
