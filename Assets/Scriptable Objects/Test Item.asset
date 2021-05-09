@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Test Item
   m_EditorClassIdentifier: 
   name: Chalice
-  icon: {fileID: -7001416569081783525, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
-  stackSize: 1
+  indexOnSheet: 3

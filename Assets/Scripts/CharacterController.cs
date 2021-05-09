@@ -148,7 +148,7 @@ public class CharacterController : MonoBehaviour
 
     void CheckRanged()
     {
-        if (rangedAttack && Time.time > nextFire && Inventory.instance.CheckIfItemExists("Shiny Rock"))
+        if (rangedAttack && Time.time > nextFire && Inventory.instance.ContainsItem("Shiny Rock"))
         {
             nextFire = Time.time + rangedRate;
             Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
@@ -163,7 +163,7 @@ public class CharacterController : MonoBehaviour
         GameObject projectile = Instantiate(rock, test);
         Rigidbody2D rockrb = projectile.GetComponent<Rigidbody2D>();
         rockrb.AddForce(moveDir * 6f, ForceMode2D.Impulse);
-        Inventory.instance.Remove("Shiny Rock");
+        Inventory.instance.RemoveItem("Shiny Rock");
     }
 
     void TakeDamage(int damage)

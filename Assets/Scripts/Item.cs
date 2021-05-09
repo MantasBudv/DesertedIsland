@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 [System.Serializable]
 public class Item : ScriptableObject
 {
-    public string itemName = "New Item";
+    new public string name = "New Item";
     public int indexOnSheet;
     public virtual void Use () 
     {
