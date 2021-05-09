@@ -286,6 +286,8 @@ public class AmogusNPCController : MonoBehaviour
         _dyingTimer += Time.deltaTime;
         if (_dyingTimer >= 0.98f)
         {
+            var Character = GameObject.FindGameObjectWithTag("Player");
+            Character.GetComponent<CharacterController>().GiveXP(400);
             gameObject.SetActive(false);
             Destroy(gameObject);
         }
