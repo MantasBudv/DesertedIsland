@@ -199,8 +199,6 @@ public class AmogusNPCController : MonoBehaviour
     
     private void UpdatePosition()
     {
-
-        Debug.Log("Updating pos");
         Vector2 positionMovement = new Vector2(
             Mathf.Cos(_rotationRads),
             Mathf.Sin(_rotationRads)
