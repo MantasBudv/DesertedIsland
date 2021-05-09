@@ -11,15 +11,19 @@ using Random = UnityEngine.Random;
 public class NPCControllerAgressive : MonoBehaviour
 {
 
-    [SerializeField] private float moveSpeedRegular = 2.2f;
+    [SerializeField] private float moveSpeedAttacking = 2.2f;
 
     [SerializeField] private float moveSpeedAgressive = 1.5f;
 
     //[SerializeField] private float concernedRange = 1.5f;
 
     [SerializeField] private float agressiveRange = 10f;
+    
+    [SerializeField] private float attackRange = 0.9f;
 
     [SerializeField] private GameObject aggresiveNpc;
+
+    [SerializeField] private Animator anim;
     
     private Rigidbody2D _player;
     private Rigidbody2D _rb;
@@ -31,6 +35,9 @@ public class NPCControllerAgressive : MonoBehaviour
     private bool _shouldRotate;
 
     private float duplicateTimer;
+    private float dyingTimer;
+    private float attackTimer;
+    private float attackCooldown;
     
     public static int SplitCount = 7;
 
@@ -39,6 +46,9 @@ public class NPCControllerAgressive : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _action = CurrentAction.Agressive;
         duplicateTimer = 0.0f;
+        dyingTimer = 0.0f;
+        attackTimer = 0.0f;
+        attackCooldown = 0.0f;
     }
     private void UpdateRotation()
     {
@@ -55,6 +65,11 @@ public class NPCControllerAgressive : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (_action == CurrentAction.Dying)
+        {
+            executeDeath();
+            return;
+        }
         UpdateDistanceToPlayer();
         UpdateState();
         IsDuplicate();
@@ -67,10 +82,24 @@ public class NPCControllerAgressive : MonoBehaviour
         if (_action == CurrentAction.Idle)
         {
             _rb.velocity = new Vector2(0.0f, 0.0f);
+            anim.SetBool("IsWalking", false);
             return;
         }
 
-        var movementSpeed = (_action == CurrentAction.Agressive) ? moveSpeedAgressive : moveSpeedRegular;
+        float movementSpeed = 0;
+        if (_action == CurrentAction.Agressive)
+        {
+            movementSpeed = moveSpeedAgressive;
+        }
+
+        if (_action == CurrentAction.Attacking)
+        {
+            movementSpeed = moveSpeedAttacking;
+        }
+        //var movementSpeed = (_action == CurrentAction.Agressive) ? moveSpeedAgressive : moveSpeedRegular;
+        
+        
+        anim.SetBool("IsWalking", true);
         
         Vector2 positionMovement = new Vector2(
             Mathf.Cos(_rotationRads),
@@ -98,13 +127,28 @@ public class NPCControllerAgressive : MonoBehaviour
         }
     }
 
+    private void executeDeath()
+    {
+        _rb.velocity = new Vector2(0.0f, 0.0f);
+        dyingTimer += Time.deltaTime;
+        if (dyingTimer >= 0.6f)
+        {
+            var Character = GameObject.FindGameObjectWithTag("Player");
+            Character.GetComponent<CharacterController>().GiveXP(300);
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+    }
+
     private void Duplicate()
     {
+        
         if (SplitCount > 0)
         {
             SplitCount--;
             var pos = _rb.position;
-            pos.y += 0.5f;
+            pos.y += Random.Range(-2f, 2f);
+            pos.x += Random.Range(-2f, 2f);
         
             Instantiate(aggresiveNpc, pos, Quaternion.identity);
         }
@@ -114,36 +158,68 @@ public class NPCControllerAgressive : MonoBehaviour
     {
         return _distanceToPlayer < agressiveRange;
     }
+
+    public bool isInAttackRange()
+    {
+        return _distanceToPlayer < attackRange;
+    }
     
     public void UpdateState()
     {
-        if (IsAgressive())
+        if (attackTimer >= 0.5f)
+        {
+            attackCooldown = 2.3f;
+        }
+        if (isInAttackRange() && attackTimer == 0f && attackCooldown <= 0.0f ||
+            _action == CurrentAction.Attacking && attackTimer <= 0.7f)
+        {
+            _action = CurrentAction.Attacking;
+            anim.SetBool("IsAttacking", true);
+            attackTimer += Time.deltaTime;
+            duplicateTimer = 0.0f;
+        }
+        else if (IsAgressive())
         {
             _action = CurrentAction.Agressive;
+            anim.SetBool("IsAttacking", false);
             duplicateTimer += Time.deltaTime;
+            attackTimer = 0.0f;
         }
         else
         {
             _action = CurrentAction.Idle;
+            anim.SetBool("IsAttacking", false);
             duplicateTimer = 0.0f;
+            attackTimer = 0.0f;
         }
+
+        attackCooldown -= Time.deltaTime;
+    }
+
+    private void commitDying()
+    {
+        _action = CurrentAction.Dying;
+        anim.SetBool("IsDying", true);
+        aggresiveNpc.GetComponent<CapsuleCollider2D>().enabled = false;
     }
     private enum CurrentAction
     {
         Idle,
         Agressive,
+        Attacking,
+        Dying
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Weapon"))
         {
-            Destroy(gameObject);
+            commitDying();
         }
         if (other.CompareTag("Throwable"))
         {
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            commitDying();
         }
     }
 }

@@ -71,11 +71,16 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.currSTA = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().getCurrSTA();
         instance.activeSave.currSkills =
             CharacterController.skills.Copy();
-        //instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                 //Inventory (need to change how items
-        //instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();                          work first)
+        instance.activeSave.currXP = CharacterController.XP;
+        instance.activeSave.currLevel = CharacterController.currentLevel;
+        instance.activeSave.currSkillPoints = CharacterController.skillPoints;
+        
+        instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                   //Inventory
+        instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();               
         audioMixer.GetFloat("Music", out instance.activeSave.musicVol);                             //Music volume
         audioMixer.GetFloat("Sounds", out instance.activeSave.soundVol);                            //Sound volume
-        FindObjectOfType<Timer>().GetTime(out instance.activeSave.timer, out instance.activeSave.dayCount);
+        FindObjectOfType<Timer>().GetTime(out instance.activeSave.timer, out instance.activeSave.dayCount); //Time
+        instance.activeSave.HotbarLevels = FindObjectOfType<Hotbar>().GetLevels();                  //Hotbar levels
 
         string dataPath = Application.persistentDataPath;
 
@@ -97,6 +102,7 @@ public class SaveManager : MonoBehaviour
             var serializer = new XmlSerializer(typeof(SaveData));
             var stream = new FileStream(datapath + "/" + activeSave.saveName + ".save", FileMode.Open);
             activeSave = serializer.Deserialize(stream) as SaveData;
+            Debug.Log(activeSave.inventory);
             stream.Close();
 
             LoadValues();
@@ -112,11 +118,13 @@ public class SaveManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").transform.position = instance.activeSave.playerPosition;
         GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().LoadStats(instance.activeSave.maxHP, instance.activeSave.currHP,
-                                                             instance.activeSave.maxSTA, instance.activeSave.currSTA, instance.activeSave.currSkills);
-        //FindObjectOfType<Inventory>().LoadInventory(instance.activeSave.inventory, instance.activeSave.invQuant);
+                                                             instance.activeSave.maxSTA, instance.activeSave.currSTA, instance.activeSave.currSkills,
+                                                             instance.activeSave.currXP, instance.activeSave.currSkillPoints, instance.activeSave.currLevel);
+        FindObjectOfType<Inventory>().LoadInventory(instance.activeSave.inventory, instance.activeSave.invQuant);
         audioMixer.SetFloat("Music", instance.activeSave.musicVol);
         audioMixer.SetFloat("Sounds", instance.activeSave.soundVol);
         FindObjectOfType<Timer>().SetTime(instance.activeSave.timer, instance.activeSave.dayCount);
+        FindObjectOfType<Hotbar>().SetLevels(instance.activeSave.HotbarLevels);
 
         //uibuttons newgame = false;
     }
@@ -154,14 +162,16 @@ public class SaveData
     public Vector2 playerPosition;
     public string currentScene;
     public int currHP, maxHP, currSTA, maxSTA;
-    //public List<Item> inventory;
-    //public List<int> invQuant;
+    public List<Item> inventory;
+    public List<int> invQuant;
     //floor item hash thing list
-    //hotbar (change it first)
+    public List<int> HotbarLevels;
     public float timer;    
     public int dayCount;
     public float musicVol, soundVol;
 
     public bool[] currSkills;
-
+    public int currXP;
+    public int currSkillPoints;
+    public int currLevel;
 }

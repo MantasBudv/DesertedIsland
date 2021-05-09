@@ -2,17 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class InteractableScript : MonoBehaviour
 {
     [SerializeField] private GameObject miniGame;
-    [SerializeField] private GameObject itemDrop;
+    [SerializeField] private Item itemDrop;
+    public GameObject pickaxe;
     
     private GameObject _highlighting;
     private GameObject _outerLayer;
     private GameObject _innerLayer;
     private bool _playerInRange;
     private bool _playerIsInteracting;
+    
 
     private float _timer;
     private Rigidbody2D _rb;
@@ -20,6 +24,17 @@ public class InteractableScript : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        SceneManager.sceneLoaded += LookForpickaxe;
+        pickaxe = GameObject.FindGameObjectWithTag("Pickaxe");
+    }
+
+    private void LookForpickaxe(Scene scene, LoadSceneMode mode)
+    {
+        pickaxe = GameObject.FindGameObjectWithTag("Pickaxe");
     }
 
     private void OnEnable()
@@ -53,7 +68,7 @@ public class InteractableScript : MonoBehaviour
 
     private void Update()
     {
-        if (_playerInRange && Input.GetKey(KeyCode.E))
+        if (_playerInRange && Input.GetMouseButton(0) && pickaxe.activeInHierarchy)
         {
             if (_playerIsInteracting == true)
             {
@@ -61,7 +76,16 @@ public class InteractableScript : MonoBehaviour
                 _innerLayer.gameObject.transform.localScale = new Vector3(_timer, _timer, 1);
                 if (_timer >= 1)
                 {
-                    Instantiate(itemDrop, _rb.position, Quaternion.identity);
+                    //Instantiate(itemDrop, _rb.position, Quaternion.identity);
+                    var Character = GameObject.FindGameObjectWithTag("Player");
+                    Character.GetComponent<CharacterController>().GiveXP(80);
+                    
+                    int amount = Random.Range(2, 5);
+                    for (int i = 0; i < amount; i++)
+                    {
+                        bool wasPickedUp = Inventory.instance.AddItem(itemDrop);
+                    }
+
                     gameObject.SetActive(false);
                     Destroy(gameObject);
                 }

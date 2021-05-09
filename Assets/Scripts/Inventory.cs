@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour , IItemContainer
 {
     #region Singleton
     public static Inventory instance;
@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
     public List<int> itemsQuantity = new List<int>();
-    public bool Add (Item item) 
+    public bool AddItem (Item item) 
     {
         if (items.Contains(item)) 
         {
@@ -51,12 +51,21 @@ public class Inventory : MonoBehaviour
         }
         return true;
     }
-    public void Remove (Item item) 
+    public void RemoveItem (string name) 
     {
-        items.Remove(item);
-        if (onItemChangedCallback != null)
-        {
-            onItemChangedCallback.Invoke();
+        Item itemToRemove = items.Find(item => item.name == name);
+        if (itemToRemove) {
+            int index = items.FindIndex(i => itemToRemove.Equals(i));
+            if (itemsQuantity[index] != 1) {
+                itemsQuantity[index]--;
+            } else {
+                items.RemoveAt(index);
+                itemsQuantity.RemoveAt(index);
+            }
+            if (onItemChangedCallback != null)
+            {
+                onItemChangedCallback.Invoke();
+            }
         }
     }
 
@@ -65,17 +74,27 @@ public class Inventory : MonoBehaviour
         return items;
     }
 
+    public bool ContainsItem(string name) {
+        bool exists = false;
+        GetItems().ForEach(item => {
+            if (item.name == name) {
+                exists = true;
+            }
+        });
+        return exists;
+    }
+
     public List<int> GetItemsQuant()
     {
         return itemsQuantity;
     }
 
-    public void LoadInventory(List<Item> items, List<int> quant)
+    public void LoadInventory(List<Item> itemsL, List<int> quant)
     {
         items.Clear();
         itemsQuantity.Clear();
 
-        foreach (var i in items)
+        foreach (var i in itemsL)
         {
             items.Add(i);
         }
@@ -89,4 +108,25 @@ public class Inventory : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
+    public bool IsFull()
+    {
+        if (items.Count == space)
+            return true;
+        else return false;
+    }
+
+    public int ItemCount(Item item)
+    {
+        if (items.Contains(item))
+        {
+            int index = items.FindIndex(i => item.Equals(i));
+            return itemsQuantity[index];
+        }
+        else return 0;
+    }
+
+    public Inventory GetInventoryInstance()
+    {
+        return instance;
+    }
 }

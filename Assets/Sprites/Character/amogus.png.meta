@@ -1,0 +1,3680 @@
+fileFormatVersion: 2
+guid: fdfa1a41e6446a8439c7def89de24335
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6406013571548007605
+    second: amogus_0
+  - first:
+      213: -3793702930181164596
+    second: amogus_1
+  - first:
+      213: 4687653927108040361
+    second: amogus_2
+  - first:
+      213: 6990501413340238990
+    second: amogus_3
+  - first:
+      213: 5719423547168532874
+    second: amogus_4
+  - first:
+      213: -7010283796374498884
+    second: amogus_5
+  - first:
+      213: -6595539365805249633
+    second: amogus_6
+  - first:
+      213: -5539217344286435803
+    second: amogus_7
+  - first:
+      213: 1526556524840790875
+    second: amogus_8
+  - first:
+      213: -8910794152728662206
+    second: amogus_9
+  - first:
+      213: 4923665179066155820
+    second: amogus_10
+  - first:
+      213: 1597513756591365116
+    second: amogus_11
+  - first:
+      213: -5353230235954364183
+    second: amogus_12
+  - first:
+      213: -798241790303935211
+    second: amogus_13
+  - first:
+      213: 7798150694533588471
+    second: amogus_14
+  - first:
+      213: -8939994232824832936
+    second: amogus_15
+  - first:
+      213: 3354414785400983026
+    second: amogus_16
+  - first:
+      213: 1571898980513110891
+    second: amogus_17
+  - first:
+      213: -5219039369884326776
+    second: amogus_18
+  - first:
+      213: 5378868411025929881
+    second: amogus_19
+  - first:
+      213: -2870114313633502790
+    second: amogus_20
+  - first:
+      213: 6794840661004109659
+    second: amogus_21
+  - first:
+      213: 659397381069821588
+    second: amogus_22
+  - first:
+      213: -5013242543361670215
+    second: amogus_23
+  - first:
+      213: -3606594440367640596
+    second: amogus_24
+  - first:
+      213: 3018850385276263914
+    second: amogus_25
+  - first:
+      213: -5624929571918063600
+    second: amogus_26
+  - first:
+      213: 466895545431570283
+    second: amogus_27
+  - first:
+      213: 7890243680296880440
+    second: amogus_28
+  - first:
+      213: -1206883847180694890
+    second: amogus_29
+  - first:
+      213: 4504600390355610495
+    second: amogus_30
+  - first:
+      213: -3377853480352239078
+    second: amogus_31
+  - first:
+      213: -1300705657970442928
+    second: amogus_32
+  - first:
+      213: -411589138959247000
+    second: amogus_33
+  - first:
+      213: -1393350386784660944
+    second: amogus_34
+  - first:
+      213: 2434041506542999364
+    second: amogus_35
+  - first:
+      213: 8988943484559320577
+    second: amogus_36
+  - first:
+      213: -3685837491830265601
+    second: amogus_37
+  - first:
+      213: 6756823000047198024
+    second: amogus_38
+  - first:
+      213: 137179585237003981
+    second: amogus_39
+  - first:
+      213: -1474238276716341201
+    second: amogus_40
+  - first:
+      213: -6765557610544368475
+    second: amogus_41
+  - first:
+      213: 5440345892866224923
+    second: amogus_42
+  - first:
+      213: 865168627107848366
+    second: amogus_43
+  - first:
+      213: -9217269694757303484
+    second: amogus_44
+  - first:
+      213: -8053472187313656366
+    second: amogus_45
+  - first:
+      213: 6249385735770338866
+    second: amogus_46
+  - first:
+      213: -3315801408389336589
+    second: amogus_47
+  - first:
+      213: 114287605299792705
+    second: amogus_48
+  - first:
+      213: 7275397031054501700
+    second: amogus_49
+  - first:
+      213: 4735357862032240960
+    second: amogus_50
+  - first:
+      213: -20173869685527429
+    second: amogus_51
+  - first:
+      213: 2691262154313851811
+    second: amogus_52
+  - first:
+      213: 1623467264971513745
+    second: amogus_53
+  - first:
+      213: -9210644024290460112
+    second: amogus_54
+  - first:
+      213: 7758731241928829915
+    second: amogus_55
+  - first:
+      213: -4314218260082048565
+    second: amogus_56
+  - first:
+      213: 6307700531651494516
+    second: amogus_57
+  - first:
+      213: -3150354762327776475
+    second: amogus_58
+  - first:
+      213: -1452489543995722841
+    second: amogus_59
+  - first:
+      213: 1134642333507918570
+    second: amogus_60
+  - first:
+      213: 8954503243237696112
+    second: amogus_61
+  - first:
+      213: 2116292378384334245
+    second: amogus_62
+  - first:
+      213: 2739392659483526160
+    second: amogus_63
+  - first:
+      213: 7348667824232101137
+    second: amogus_64
+  - first:
+      213: 7259617156836130479
+    second: amogus_65
+  - first:
+      213: -4221205882714427953
+    second: amogus_66
+  - first:
+      213: 2562455940338697558
+    second: amogus_67
+  - first:
+      213: 9216814683620098353
+    second: amogus_68
+  - first:
+      213: -7740557622861029834
+    second: amogus_69
+  - first:
+      213: 6886735141890561262
+    second: amogus_70
+  - first:
+      213: 5577604203182456034
+    second: amogus_71
+  - first:
+      213: -3101742780798953036
+    second: amogus_72
+  - first:
+      213: -1751797464408786983
+    second: amogus_73
+  - first:
+      213: -3778862564901377235
+    second: amogus_74
+  - first:
+      213: 5079455847493801452
+    second: amogus_75
+  - first:
+      213: -1783550567919526546
+    second: amogus_76
+  - first:
+      213: 7156806743916437472
+    second: amogus_77
+  - first:
+      213: 4412091202531274693
+    second: amogus_78
+  - first:
+      213: 3249766395635160960
+    second: amogus_79
+  - first:
+      213: -1998161184502603643
+    second: amogus_80
+  - first:
+      213: -4524340694962734801
+    second: amogus_81
+  - first:
+      213: 6754939473346145829
+    second: amogus_82
+  - first:
+      213: 5029641836051512207
+    second: amogus_83
+  - first:
+      213: 4740150944022776007
+    second: amogus_84
+  - first:
+      213: 5361491184210140010
+    second: amogus_85
+  - first:
+      213: 8116453040309234373
+    second: amogus_86
+  - first:
+      213: -1955777748036589889
+    second: amogus_87
+  - first:
+      213: 5689148902476985582
+    second: amogus_88
+  - first:
+      213: -908845551873006051
+    second: amogus_89
+  - first:
+      213: -1482095322905959410
+    second: amogus_90
+  - first:
+      213: -1728186543453557937
+    second: amogus_91
+  - first:
+      213: 3891739052103671771
+    second: amogus_92
+  - first:
+      213: 6118995652274715955
+    second: amogus_93
+  - first:
+      213: -8728637361675007900
+    second: amogus_94
+  - first:
+      213: 3727993197967565217
+    second: amogus_95
+  - first:
+      213: 721073922475005939
+    second: amogus_96
+  - first:
+      213: -2953182544035341672
+    second: amogus_97
+  - first:
+      213: 8951515352472931009
+    second: amogus_98
+  - first:
+      213: 2073922071922806996
+    second: amogus_99
+  - first:
+      213: -615750296371875978
+    second: amogus_100
+  - first:
+      213: 8983195626084261209
+    second: amogus_101
+  - first:
+      213: -9153156761607539119
+    second: amogus_102
+  - first:
+      213: 2679214930961939679
+    second: amogus_103
+  - first:
+      213: 6852747477166159930
+    second: amogus_104
+  - first:
+      213: 9162900626546701366
+    second: amogus_105
+  - first:
+      213: 3165015735772510496
+    second: amogus_106
+  - first:
+      213: 2028788022437644134
+    second: amogus_107
+  - first:
+      213: -8206165374871539565
+    second: amogus_108
+  - first:
+      213: 7036893318275408980
+    second: amogus_109
+  - first:
+      213: 1676126957720998424
+    second: amogus_110
+  - first:
+      213: -7891961338173102071
+    second: amogus_111
+  - first:
+      213: 6879980139601580774
+    second: amogus_112
+  - first:
+      213: 5030331984512382011
+    second: amogus_113
+  - first:
+      213: 2771328325887344560
+    second: amogus_114
+  - first:
+      213: 4479750164067815104
+    second: amogus_115
+  - first:
+      213: 9169199248343326452
+    second: amogus_116
+  - first:
+      213: -5863408193635569691
+    second: amogus_117
+  - first:
+      213: -3053942240001787464
+    second: amogus_118
+  - first:
+      213: 8886195539085580337
+    second: amogus_119
+  - first:
+      213: -3080212808836695322
+    second: amogus_120
+  - first:
+      213: -6598474404342000367
+    second: amogus_121
+  - first:
+      213: 5560438553110056412
+    second: amogus_122
+  - first:
+      213: 5314690123216813478
+    second: amogus_123
+  - first:
+      213: 2633553748490967009
+    second: amogus_124
+  - first:
+      213: 4154185409859895532
+    second: amogus_125
+  - first:
+      213: -5146641660413299839
+    second: amogus_126
+  - first:
+      213: -5544413817413762038
+    second: amogus_127
+  - first:
+      213: 1142454226427681723
+    second: amogus_128
+  - first:
+      213: -4161374672393007100
+    second: amogus_129
+  - first:
+      213: 2897251750281148051
+    second: amogus_130
+  - first:
+      213: -6020376953867527619
+    second: amogus_131
+  - first:
+      213: -1433138518986655034
+    second: amogus_132
+  - first:
+      213: -7888003028385343881
+    second: amogus_133
+  - first:
+      213: 3742745985942598608
+    second: amogus_134
+  - first:
+      213: -295488645421824867
+    second: amogus_135
+  - first:
+      213: 7257240773531540452
+    second: amogus_136
+  - first:
+      213: 6715218369637723252
+    second: amogus_137
+  - first:
+      213: 7582757162558313138
+    second: amogus_138
+  - first:
+      213: -4803520379262016731
+    second: amogus_139
+  - first:
+      213: 729585504853948450
+    second: amogus_140
+  - first:
+      213: -3363619814141403679
+    second: amogus_141
+  - first:
+      213: -6711721386650415021
+    second: amogus_142
+  - first:
+      213: -3975253033215030912
+    second: amogus_143
+  - first:
+      213: -7056829617177615028
+    second: amogus_144
+  - first:
+      213: 8553292782368732943
+    second: amogus_145
+  - first:
+      213: 6136200572641503079
+    second: amogus_146
+  - first:
+      213: 8496405104885655724
+    second: amogus_147
+  - first:
+      213: -3374365973329521891
+    second: amogus_148
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: amogus_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1796
+        width: 152
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43bc81e8944917a0800000000000000
+      internalID: -6406013571548007605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1920
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1713fe84f0a5bc0800000000000000
+      internalID: -3793702930181164596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1935
+        width: 101
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a65d331964ed0140800000000000000
+      internalID: 4687653927108040361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_3
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1885
+        width: 193
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84d2088fff330160800000000000000
+      internalID: 6990501413340238990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_4
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1932
+        width: 89
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a892cf0d9697f5f40800000000000000
+      internalID: 5719423547168532874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1836
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1db6e770876be90800000000000000
+      internalID: -7010283796374498884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_6
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1815
+        width: 99
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ba21734efe774a0800000000000000
+      internalID: -6595539365805249633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_7
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1796
+        width: 98
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526df146c2fb023b0800000000000000
+      internalID: -5539217344286435803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_8
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1780
+        width: 94
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ba0b0421b6f2510800000000000000
+      internalID: 1526556524840790875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_9
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1785
+        width: 99
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24feaf3fdef765480800000000000000
+      internalID: -8910794152728662206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1792
+        width: 84
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23c237c46f545440800000000000000
+      internalID: 4923665179066155820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_11
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1816
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb9d613c428b2610800000000000000
+      internalID: 1597513756591365116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_12
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1680
+        width: 99
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e04f09867185b5b0800000000000000
+      internalID: -5353230235954364183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1801
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515ef0c22531ce4f0800000000000000
+      internalID: -798241790303935211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1684
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5e3a48db8983c60800000000000000
+      internalID: 7798150694533588471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_15
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1705
+        width: 75
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c5f628c92cee380800000000000000
+      internalID: -8939994232824832936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_16
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1662
+        width: 193
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdc42199764d8e20800000000000000
+      internalID: 3354414785400983026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_17
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1714
+        width: 79
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b58446bc180d510800000000000000
+      internalID: 1571898980513110891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_18
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1722
+        width: 72
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8842441485f3297b0800000000000000
+      internalID: -5219039369884326776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_19
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1708
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99635c4425495aa40800000000000000
+      internalID: 5378868411025929881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_20
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1704
+        width: 68
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab96c1ffc3e4b28d0800000000000000
+      internalID: -2870114313633502790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_21
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1569
+        width: 196
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57c780a49f1c4e50800000000000000
+      internalID: 6794840661004109659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_22
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1688
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4965d78ac66a62900800000000000000
+      internalID: 659397381069821588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_23
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1614
+        width: 135
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b34d06d7726d6ab0800000000000000
+      internalID: -5013242543361670215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1544
+        width: 109
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefecfc077dc2fdc0800000000000000
+      internalID: -3606594440367640596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_25
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1328
+        width: 207
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed517c4e6c15e920800000000000000
+      internalID: 3018850385276263914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1567
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018db334b5c30f1b0800000000000000
+      internalID: -5624929571918063600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_27
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1551
+        width: 198
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6739ac560fba7600800000000000000
+      internalID: 466895545431570283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_28
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1552
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839cd5ba2d6cf7d60800000000000000
+      internalID: 7890243680296880440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_29
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1534
+        width: 85
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a43ab0989404fe0800000000000000
+      internalID: -1206883847180694890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_30
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1429
+        width: 191
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b6b3a403e838e30800000000000000
+      internalID: 4504600390355610495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_31
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1542
+        width: 72
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12b94008247f11d0800000000000000
+      internalID: -3377853480352239078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_32
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1426
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05db4537817f2fde0800000000000000
+      internalID: -1300705657970442928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_33
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1501
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869dceadbddb94af0800000000000000
+      internalID: -411589138959247000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_34
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1495
+        width: 71
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0321c0c9433d9ace0800000000000000
+      internalID: -1393350386784660944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_35
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1315
+        width: 193
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4475d06aad377c120800000000000000
+      internalID: 2434041506542999364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_36
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1437
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106683749742fbc70800000000000000
+      internalID: 8988943484559320577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_37
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1378
+        width: 145
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8e3af545649dcc0800000000000000
+      internalID: -3685837491830265601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1291
+        width: 112
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f900828be05cd50800000000000000
+      internalID: 6756823000047198024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_39
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1219
+        width: 77
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dceac702b1c57e100800000000000000
+      internalID: 137179585237003981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_40
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1219
+        width: 97
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28d90229147a8be0800000000000000
+      internalID: -1474238276716341201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_41
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1200
+        width: 193
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4ff0cd239eb12a0800000000000000
+      internalID: -6765557610544368475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_42
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1315
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13fb8fe3cdff7b40800000000000000
+      internalID: 5440345892866224923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_43
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1306
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea063915842b10c00800000000000000
+      internalID: 865168627107848366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_44
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1314
+        width: 94
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b840d3c0ea51080800000000000000
+      internalID: -9217269694757303484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_45
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1296
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd6eaaf6b15c3090800000000000000
+      internalID: -8053472187313656366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_46
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1293
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236fbfc47374ab650800000000000000
+      internalID: 6249385735770338866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_47
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1286
+        width: 97
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1b63bdf28ebf1d0800000000000000
+      internalID: -3315801408389336589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1187
+        width: 84
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bcf14b8f7069100800000000000000
+      internalID: 114287605299792705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_49
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 986
+        width: 97
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4476fe39d0767f460800000000000000
+      internalID: 7275397031054501700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_50
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1224
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041f8c2f2ee57b140800000000000000
+      internalID: 4735357862032240960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_51
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1212
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c26afe8f358bff0800000000000000
+      internalID: -20173869685527429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_52
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1183
+        width: 65
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a36451aba8495520800000000000000
+      internalID: 2691262154313851811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_53
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1083
+        width: 203
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f1a1140e6b78610800000000000000
+      internalID: 1623467264971513745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_54
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1206
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03eb79b5f083d2080800000000000000
+      internalID: -9210644024290460112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_55
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1116
+        width: 127
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdba4eef4fc8cab60800000000000000
+      internalID: 7758731241928829915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1035
+        width: 95
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc14e44a951d024c0800000000000000
+      internalID: -4314218260082048565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_57
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1076
+        width: 93
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47241a2c634798750800000000000000
+      internalID: 6307700531651494516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_58
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1111
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5232ef2f801b744d0800000000000000
+      internalID: -3150354762327776475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_59
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1021
+        width: 168
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a37a229478b7dbe0800000000000000
+      internalID: -1452489543995722841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_60
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1077
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea1cd3d03f0fbf00800000000000000
+      internalID: 1134642333507918570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_61
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 966
+        width: 199
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0722449b149c44c70800000000000000
+      internalID: 8954503243237696112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_62
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 941
+        width: 84
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adf67e94b49e5d10800000000000000
+      internalID: 2116292378384334245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_63
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 982
+        width: 85
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01404d02c17440620800000000000000
+      internalID: 2739392659483526160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_64
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 865
+        width: 97
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11572b38376bbf560800000000000000
+      internalID: 7348667824232101137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_65
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 995
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae7c8e47575fb460800000000000000
+      internalID: 7259617156836130479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_66
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 926
+        width: 164
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd64055d934b65c0800000000000000
+      internalID: -4221205882714427953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_67
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 826
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6554a7ce91caf8320800000000000000
+      internalID: 2562455940338697558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_68
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 888
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131c7c93f14b8ef70800000000000000
+      internalID: 9216814683620098353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_69
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 848
+        width: 194
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e1ded6ad3049490800000000000000
+      internalID: -7740557622861029834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_70
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 801
+        width: 166
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee41692cf19929f50800000000000000
+      internalID: 6886735141890561262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_71
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 747
+        width: 191
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec7a6ca871a76d40800000000000000
+      internalID: 5577604203182456034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_72
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 880
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b998d5ef5564f4d0800000000000000
+      internalID: -3101742780798953036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 794
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7fb7fcc7d50b7e0800000000000000
+      internalID: -1751797464408786983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_74
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 796
+        width: 68
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b280cb488ce8bc0800000000000000
+      internalID: -3778862564901377235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_75
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 797
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce516226e2add7640800000000000000
+      internalID: 5079455847493801452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_76
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 760
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dd538453e8f37e0800000000000000
+      internalID: -1783550567919526546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_77
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 756
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef5241b0d5125360800000000000000
+      internalID: 7156806743916437472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_78
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 698
+        width: 74
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfa08b8295ea3d30800000000000000
+      internalID: 4412091202531274693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_79
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 760
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087d5de915d791d20800000000000000
+      internalID: 3249766395635160960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_80
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 702
+        width: 76
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580afb94dfa1544e0800000000000000
+      internalID: -1998161184502603643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_81
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 682
+        width: 93
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29f6e1eb105631c0800000000000000
+      internalID: -4524340694962734801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_82
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 623
+        width: 97
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52eaf0c69ad5ebd50800000000000000
+      internalID: 6754939473346145829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_83
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 739
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b3b490a90ecc540800000000000000
+      internalID: 5029641836051512207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_84
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 633
+        width: 124
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8c5305b2668c140800000000000000
+      internalID: 4740150944022776007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_85
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 655
+        width: 85
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bdb3d53d7d76a40800000000000000
+      internalID: 5361491184210140010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_86
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 665
+        width: 90
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca65cf890f63a070800000000000000
+      internalID: 8116453040309234373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_87
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 710
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb66aa4108eabd4e0800000000000000
+      internalID: -1955777748036589889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 660
+        width: 94
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4b17ec8cae3fe40800000000000000
+      internalID: 5689148902476985582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_89
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 686
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d166aec29c12363f0800000000000000
+      internalID: -908845551873006051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_90
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 689
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e042ce2082a8e6be0800000000000000
+      internalID: -1482095322905959410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_91
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 567
+        width: 80
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b27dbbe7f3408e0800000000000000
+      internalID: -1728186543453557937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_92
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 509
+        width: 99
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf972f6c0c320630800000000000000
+      internalID: 3891739052103671771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_93
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 530
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d7efb302a0be450800000000000000
+      internalID: 6118995652274715955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_94
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 513
+        width: 104
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468882cd096add680800000000000000
+      internalID: -8728637361675007900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_95
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 551
+        width: 85
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1ede1df0e7cb330800000000000000
+      internalID: 3727993197967565217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_96
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 600
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f79bed79e4c10a00800000000000000
+      internalID: 721073922475005939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_97
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 555
+        width: 75
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a93e17f103407d0800000000000000
+      internalID: -2953182544035341672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_98
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 609
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caca9139cb2a3c70800000000000000
+      internalID: 8951515352472931009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_99
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 588
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d01dc4e22d08cc10800000000000000
+      internalID: 2073922071922806996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_100
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 588
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fa96a2e5a6477f0800000000000000
+      internalID: -615750296371875978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_101
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 534
+        width: 22
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d5890b3d8baac70800000000000000
+      internalID: 8983195626084261209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 535
+        width: 94
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156faeabb6479f080800000000000000
+      internalID: -9153156761607539119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_103
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 517
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcb8ecd8cb7e2520800000000000000
+      internalID: 2679214930961939679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_104
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 414
+        width: 103
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3871f7e589d91f50800000000000000
+      internalID: 6852747477166159930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_105
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 492
+        width: 112
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634358d9299292f70800000000000000
+      internalID: 9162900626546701366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 397
+        width: 220
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029fd3fea056ceb20800000000000000
+      internalID: 3165015735772510496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_107
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 442
+        width: 80
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66786f915f3b72c10800000000000000
+      internalID: 2028788022437644134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_108
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 427
+        width: 93
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390fba6d118dd1e80800000000000000
+      internalID: -8206165374871539565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_109
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 416
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454202e903118a160800000000000000
+      internalID: 7036893318275408980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_110
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 412
+        width: 103
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8129a69669cc24710800000000000000
+      internalID: 1676126957720998424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_111
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 457
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9086311f9fe1a7290800000000000000
+      internalID: -7891961338173102071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_112
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 424
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2d1ba3c799a7f50800000000000000
+      internalID: 6879980139601580774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_113
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 277
+        width: 289
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34752fb9445fc540800000000000000
+      internalID: 5030331984512382011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_114
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 304
+        width: 108
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf3e74ed6cb57620800000000000000
+      internalID: 2771328325887344560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_115
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 327
+        width: 74
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce82cb1a054b2e30800000000000000
+      internalID: 4479750164067815104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_116
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 402
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe5848c22a8f3f70800000000000000
+      internalID: 9169199248343326452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_117
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 396
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efac35405df0aea0800000000000000
+      internalID: -5863408193635569691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_118
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 318
+        width: 102
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9f12496b73e95d0800000000000000
+      internalID: -3053942240001787464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_119
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 370
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1385bdff2cb125b70800000000000000
+      internalID: 8886195539085580337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_120
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 308
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea3ea025c2e045d0800000000000000
+      internalID: -3080212808836695322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_121
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 305
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11510bd4d728d64a0800000000000000
+      internalID: -6598474404342000367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_122
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 276
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd03815765aa2d40800000000000000
+      internalID: 5560438553110056412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_123
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 143
+        width: 190
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad7d95328291c940800000000000000
+      internalID: 5314690123216813478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_124
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 178
+        width: 110
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7d3bb5e234c8420800000000000000
+      internalID: 2633553748490967009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_125
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 196
+        width: 82
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce04fc5de91a6a930800000000000000
+      internalID: 4154185409859895532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_126
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 93
+        width: 84
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183b6dc8da47398b0800000000000000
+      internalID: -5146641660413299839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_127
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 205
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04094532094e03b0800000000000000
+      internalID: -5544413817413762038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_128
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 203
+        width: 84
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb9d52e010dadf00800000000000000
+      internalID: 1142454226427681723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_129
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 116
+        width: 85
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40015ba88c3df36c0800000000000000
+      internalID: -4161374672393007100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_130
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 195
+        width: 81
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396f268dd1b153820800000000000000
+      internalID: 2897251750281148051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_131
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 155
+        width: 89
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a17cace03537ca0800000000000000
+      internalID: -6020376953867527619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_132
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 81
+        width: 104
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cafedd2c187c1ce0800000000000000
+      internalID: -1433138518986655034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_133
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 140
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776d2e1c90f288290800000000000000
+      internalID: -7888003028385343881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_134
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 141
+        width: 64
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3b0a0f4a7e0f330800000000000000
+      internalID: 3742745985942598608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_135
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 96
+        width: 91
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94887e74a636ebf0800000000000000
+      internalID: -295488645421824867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_136
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 91
+        width: 87
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb14d37806e6b460800000000000000
+      internalID: 7257240773531540452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_137
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 106
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c2f67478f313d50800000000000000
+      internalID: 6715218369637723252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_138
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 33
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b25654d67d5b3960800000000000000
+      internalID: 7582757162558313138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_139
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 28
+        width: 83
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523ecba4aa7765db0800000000000000
+      internalID: -4803520379262016731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_140
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 80
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228f712b622002a00800000000000000
+      internalID: 729585504853948450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_141
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 92
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edd2aaa9950251d0800000000000000
+      internalID: -3363619814141403679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_142
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 80
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3505f4585fc2bd2a0800000000000000
+      internalID: -6711721386650415021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_143
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 0
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0898ce69d6015d8c0800000000000000
+      internalID: -3975253033215030912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_144
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6
+        width: 84
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c452ca31ada111e90800000000000000
+      internalID: -7056829617177615028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_145
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f073001e77663b670800000000000000
+      internalID: 8553292782368732943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_146
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 11
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76768dae8e9282550800000000000000
+      internalID: 6136200572641503079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_147
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca866805d6b49e570800000000000000
+      internalID: 8496405104885655724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amogus_148
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1357818608db21d0800000000000000
+      internalID: -3374365973329521891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

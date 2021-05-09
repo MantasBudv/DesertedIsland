@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
     public Animator animator;
     private Vector2 moveDir;
     public GameObject gameOver;
+    public GameObject XPDropComponent;
+    private static GameObject XPDropComponentStatic;
     [Space(10)]
 
     [Header("Movement")]
@@ -45,6 +47,12 @@ public class CharacterController : MonoBehaviour
     private float attackRate = 0.25f;
     private float rangedRate = 0.3f;
     private float nextFire = 0f;
+    
+    //XP and level system
+    public static int currentLevel;
+    public static int XP;
+    public static int skillPoints;
+
 
 
     private void Awake() 
@@ -57,6 +65,8 @@ public class CharacterController : MonoBehaviour
         camera = Camera.main;
         if (skills == null)
             skills = new AcquiredSkills();
+
+        XPDropComponentStatic = XPDropComponent;
         if (UIButtons.newgame)
         {
             currentHealth = maxHealth;
@@ -138,7 +148,7 @@ public class CharacterController : MonoBehaviour
 
     void CheckRanged()
     {
-        if (rangedAttack && Time.time > nextFire)
+        if (rangedAttack && Time.time > nextFire && Inventory.instance.ContainsItem("Shiny Rock"))
         {
             nextFire = Time.time + rangedRate;
             Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
@@ -153,6 +163,7 @@ public class CharacterController : MonoBehaviour
         GameObject projectile = Instantiate(rock, test);
         Rigidbody2D rockrb = projectile.GetComponent<Rigidbody2D>();
         rockrb.AddForce(moveDir * 6f, ForceMode2D.Impulse);
+        Inventory.instance.RemoveItem("Shiny Rock");
     }
 
     void TakeDamage(int damage)
@@ -175,21 +186,25 @@ public class CharacterController : MonoBehaviour
         return currentHealth;
     }
 
-    public void LoadStats(int maxHP, int currHP, int maxSTA, int currSTA, bool[] currSkills)
+    public void LoadStats(int maxHP, int currHP, int maxSTA, int currSTA, bool[] currSkills,
+        int currXP, int currSkillPoints, int currLevel)
     {
         maxHealth = maxHP;
         currentHealth = currHP;
 
         maxStamina = maxSTA;
         currentStamina = currSTA;
+        
         skills = new AcquiredSkills(currSkills);
+        XP = currXP;
+        skillPoints = currSkillPoints;
+        currentLevel = currLevel;
         //Debug.Log(skills.HasAcquired(AcquiredSkills.SkillEnum.StaminaRegen));
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
         staminaBar.SetMaxStamina(maxStamina);
         staminaBar.SetStamina(currentStamina);
     }
-
     //Stamina
 
     void ReduceStamina()
@@ -204,12 +219,20 @@ public class CharacterController : MonoBehaviour
         {
             if (skills.HasAcquired(AcquiredSkills.SkillEnum.StaminaRegen))
             {
-                currentStamina += 10;
+                currentStamina += 4;
             }
             staminaBar.SetStamina(++currentStamina);
         }
     }
-
+ 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("EnemyThrowable"))
+        {
+            Destroy(other.gameObject);
+            TakeDamage(1);
+        }
+    }
     public int getCurrSTA()
     {
         return currentStamina;
@@ -226,6 +249,24 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public void GiveXP(int XPAmount)
+    {
+        XP += XPAmount;
+        if (XP - currentLevel * 1000 >= 1000)
+        {
+            int levels = (int) (XP - currentLevel * 1000) / 1000;
+            currentLevel += levels;
+            skillPoints += levels;
+        }
+
+        GameObject xpDrop = Instantiate(XPDropComponent, rb.position, Quaternion.identity);
+        xpDrop.GetComponent<XPDropController>().SetXPAmount(XPAmount);
+    }
+
+    public static int GetXPForNextLevel()
+    {
+        return 1000 - (XP - currentLevel * 1000);
+    }
     public class AcquiredSkills
     {
         static int size = 1;
@@ -259,6 +300,8 @@ public class CharacterController : MonoBehaviour
                     Debug.Log("Error");
                     break;
             }
+
+            skillPoints--;
         }
 
         public bool HasAcquired(SkillEnum skill)

@@ -13,7 +13,7 @@ public class ActiveWeapon : MonoBehaviour
         Transform[] transform = gameObject.GetComponentsInChildren<Transform>();
         foreach (Transform t in transform)
         {
-            if (t.gameObject.name != "Hand")
+            if (t.gameObject.name != "Hand" && t.gameObject.tag != "DontDisable")
             {
                 weaponsUI.Add(t.gameObject);    
             }
@@ -26,7 +26,7 @@ public class ActiveWeapon : MonoBehaviour
     void Update()
     {
         setActiveWeapon();
-        updateSprites();
+        //updateSprites();
     }
     void updateSprites() {
         foreach (GameObject weaponUI in weaponsUI) {

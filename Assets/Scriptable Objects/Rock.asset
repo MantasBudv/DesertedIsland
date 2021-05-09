@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   name: Shiny Rock
-  icon: {fileID: -5858661556975674294, guid: 176d0b9205ce55048ad6b598521fcfe7, type: 3}
+  indexOnSheet: 1

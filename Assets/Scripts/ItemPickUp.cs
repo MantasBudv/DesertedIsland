@@ -8,11 +8,13 @@ public class ItemPickUp : MonoBehaviour
     private double hash;
     private SpriteRenderer spriteRenderer;
     public Item item;
+    private Sprite[] tempSprite;
     private void Awake() 
     {
         hash = (1000*transform.position.x) + (0.001*transform.position.y);
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = item.icon;
+        tempSprite = Resources.LoadAll<Sprite>("ItemSprites/Original_items");
+        spriteRenderer.sprite = tempSprite[item.indexOnSheet];
     }
     public double getPositionHash()
     {
@@ -36,7 +38,7 @@ public class ItemPickUp : MonoBehaviour
     void PickUp()
     {
         Debug.Log("Picking up " + item.name);
-        bool wasPickedUp = Inventory.instance.Add(item);
+        bool wasPickedUp = Inventory.instance.AddItem(item);
         if (wasPickedUp) 
         {
             PickedUpItemsSave.pickedUpItems.Add(hash);
