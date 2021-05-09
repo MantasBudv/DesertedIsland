@@ -8,6 +8,7 @@ public class InteractableScript : MonoBehaviour
 {
     [SerializeField] private GameObject miniGame;
     [SerializeField] private Item itemDrop;
+    public GameObject pickaxe;
     
     private GameObject _highlighting;
     private GameObject _outerLayer;
@@ -55,7 +56,7 @@ public class InteractableScript : MonoBehaviour
 
     private void Update()
     {
-        if (_playerInRange && Input.GetKey(KeyCode.E))
+        if (_playerInRange && Input.GetMouseButton(0) && pickaxe.activeInHierarchy)
         {
             if (_playerIsInteracting == true)
             {

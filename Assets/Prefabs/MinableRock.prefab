@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniGame: {fileID: 0}
   itemDrop: {fileID: 11400000, guid: fd1bd93eaf2e09f4f9737536cfc798cf, type: 2}
+  pickaxe: {fileID: 0}
 --- !u!70 &4148003785981110758
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

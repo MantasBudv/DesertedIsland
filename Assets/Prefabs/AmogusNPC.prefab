@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  attackRange: 6
+  attackRange: 4.5
   retreatRange: 1.5
   anim: {fileID: 546940685051136339}
   throws: {fileID: 4465443244353645407, guid: b76c6efc652c8154dbf460e25646b963, type: 3}

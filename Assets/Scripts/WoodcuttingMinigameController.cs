@@ -56,7 +56,7 @@ public class WoodcuttingMinigameController : MonoBehaviour
     {
         isActive = true;
         InactivityTimer = 1f;
-        attempts = 4;
+        attempts = 1;
         collectedWood = 0;
         NewGoalBar();
     }
@@ -65,6 +65,7 @@ public class WoodcuttingMinigameController : MonoBehaviour
     {
         if (attempts <= 0)
         {
+            WoodcuttingUI.GameIsWCMenu = false;
             gameObject.SetActive(false);
             for (int i = 0; i < collectedWood; i++)
             {
