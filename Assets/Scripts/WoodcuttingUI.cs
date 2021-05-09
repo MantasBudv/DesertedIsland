@@ -14,7 +14,6 @@ public class WoodcuttingUI : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        
         SceneManager.sceneLoaded += LookForAxe;
         axe = GameObject.FindGameObjectWithTag("Axe");
     }

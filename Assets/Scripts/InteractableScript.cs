@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class InteractableScript : MonoBehaviour
@@ -23,6 +24,17 @@ public class InteractableScript : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        SceneManager.sceneLoaded += LookForpickaxe;
+        pickaxe = GameObject.FindGameObjectWithTag("Pickaxe");
+    }
+
+    private void LookForpickaxe(Scene scene, LoadSceneMode mode)
+    {
+        pickaxe = GameObject.FindGameObjectWithTag("Pickaxe");
     }
 
     private void OnEnable()
