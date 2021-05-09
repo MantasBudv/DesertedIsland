@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 7802617447464621477}
   m_Layer: 0
   m_Name: Axe
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -876,6 +876,7 @@ MonoBehaviour:
   test: {fileID: 8913697486274653060}
   animator: {fileID: 3762885527640912623}
   gameOver: {fileID: 0}
+  XPDropComponent: {fileID: 0}
   movementSpeed: 5
   BASE_MOVE_SPEED: 3.5
   maxHealth: 5

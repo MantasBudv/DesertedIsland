@@ -71,6 +71,10 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.currSTA = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().getCurrSTA();
         instance.activeSave.currSkills =
             CharacterController.skills.Copy();
+        instance.activeSave.currXP = CharacterController.XP;
+        instance.activeSave.currLevel = CharacterController.currentLevel;
+        instance.activeSave.currSkillPoints = CharacterController.skillPoints;
+        
         instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                   //Inventory (need to change how items
         instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();               //work first)
         audioMixer.GetFloat("Music", out instance.activeSave.musicVol);                             //Music volume
@@ -114,7 +118,8 @@ public class SaveManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").transform.position = instance.activeSave.playerPosition;
         GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().LoadStats(instance.activeSave.maxHP, instance.activeSave.currHP,
-                                                             instance.activeSave.maxSTA, instance.activeSave.currSTA, instance.activeSave.currSkills);
+                                                             instance.activeSave.maxSTA, instance.activeSave.currSTA, instance.activeSave.currSkills,
+                                                             instance.activeSave.currXP, instance.activeSave.currSkillPoints, instance.activeSave.currLevel);
         FindObjectOfType<Inventory>().LoadInventory(instance.activeSave.inventory, instance.activeSave.invQuant);
         audioMixer.SetFloat("Music", instance.activeSave.musicVol);
         audioMixer.SetFloat("Sounds", instance.activeSave.soundVol);
@@ -166,5 +171,7 @@ public class SaveData
     public float musicVol, soundVol;
 
     public bool[] currSkills;
-
+    public int currXP;
+    public int currSkillPoints;
+    public int currLevel;
 }

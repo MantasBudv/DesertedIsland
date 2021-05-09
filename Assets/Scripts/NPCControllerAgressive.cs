@@ -133,6 +133,8 @@ public class NPCControllerAgressive : MonoBehaviour
         dyingTimer += Time.deltaTime;
         if (dyingTimer >= 0.6f)
         {
+            var Character = GameObject.FindGameObjectWithTag("Player");
+            Character.GetComponent<CharacterController>().GiveXP(300);
             gameObject.SetActive(false);
             Destroy(gameObject);
         }

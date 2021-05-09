@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WoodcuttingUI : MonoBehaviour
 {
@@ -10,6 +12,18 @@ public class WoodcuttingUI : MonoBehaviour
     private bool meleeAttack;
 
     // Update is called once per frame
+    private void Start()
+    {
+        
+        SceneManager.sceneLoaded += LookForAxe;
+        axe = GameObject.FindGameObjectWithTag("Axe");
+    }
+
+    private void LookForAxe(Scene scene, LoadSceneMode mode)
+    {
+        axe = GameObject.FindGameObjectWithTag("Axe");
+    }
+
     void Update()
     {
         meleeAttack = Input.GetButtonDown("Fire1");

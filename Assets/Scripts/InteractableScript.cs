@@ -65,7 +65,9 @@ public class InteractableScript : MonoBehaviour
                 if (_timer >= 1)
                 {
                     //Instantiate(itemDrop, _rb.position, Quaternion.identity);
-
+                    var Character = GameObject.FindGameObjectWithTag("Player");
+                    Character.GetComponent<CharacterController>().GiveXP(80);
+                    
                     int amount = Random.Range(2, 5);
                     for (int i = 0; i < amount; i++)
                     {
