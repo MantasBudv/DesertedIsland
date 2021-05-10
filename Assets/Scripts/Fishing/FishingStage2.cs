@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishingStage2and3 : MonoBehaviour
+public class FishingStage2 : MonoBehaviour
 {
     [SerializeField] GameObject fish;
     [SerializeField] Transform hook;
@@ -12,27 +12,36 @@ public class FishingStage2and3 : MonoBehaviour
     [SerializeField] Transform rightPivot;
     [SerializeField] Transform topPivot;
     [SerializeField] Transform bottomPivot;
+    [SerializeField] SetupFishing fishingScript;
     [SerializeField] float reelPower = 0.1f;
     [SerializeField] float gravityPower = 0.005f;
     public float reelVelocity;
     public float hookPosition;
-    public float fishSpeed = 0.1f;
+    public float fishSpeed;
+    private float errorTimer;
     bool isCaught;
     bool moveLeft;
     bool pressedA;
-    float fishSpeedTimer = 1.5f;
+    float fishSpeedTimer = 1f;
+    public static bool pause;
     // Start is called before the first frame update
     void Start()
     {
+        fishingScript = GetComponentInParent<SetupFishing>();
+        errorTimer = 0.5f;
+        pause = false;
         pressedA = false;
         moveLeft = false;
         isCaught = false;
         fish.transform.position = new Vector3(leftPivot.position.x, fishGrounds.position.y, 0);
     }
-
+    
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (pause) return;
+
+        errorTimer -= Time.deltaTime;
         fishSpeedTimer -= Time.deltaTime;
         if (!isCaught)
         {
@@ -49,13 +58,14 @@ public class FishingStage2and3 : MonoBehaviour
             fishSpeedTimer = 1.5f;
         }
     }
-    private void Update()
-    {
+    void Update()
+    { 
+        if (pause) return;
         if (isCaught)
         {
             CheckReelInputs();
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0) && errorTimer < 0f)
         {
             CheckIfCaught();
         }
@@ -63,14 +73,19 @@ public class FishingStage2and3 : MonoBehaviour
    
     private void CheckIfCaught()
     {
-        if (fish.transform.position.x < this.transform.parent.position.x + 0.15f  && fish.transform.position.x > this.transform.parent.position.x - 0.15f)
+        if (fish.transform.position.x < this.transform.parent.position.x + 0.2f  && fish.transform.position.x > this.transform.parent.position.x - 0.2f)
         {
             isCaught = true;
-            fish.transform.position = hook.position - new Vector3(0.15f, 0.14f, 0);
+            fish.transform.position = hook.position - new Vector3(0.1f, 0.1f, 0);
             fish.transform.parent = hook;
             float distance = topPivot.position.y - bottomPivot.position.y + 0.8f;
             hookPosition = (hook.position.y - bottomPivot.position.y) / distance;
             Debug.Log(hookPosition);
+        }
+        else
+        {
+            fishingScript.CountMistake();
+            errorTimer = 0.5f;
         }
     }
 
@@ -106,11 +121,9 @@ public class FishingStage2and3 : MonoBehaviour
         {
             pressedA = true;
             reelVelocity += reelPower * Time.deltaTime;
-            Debug.Log("A");
         }
         if (Input.GetKeyDown(KeyCode.D) && pressedA)
         {
-            Debug.Log("D");
             pressedA = false;
             reelVelocity += reelPower * Time.deltaTime;
         }
@@ -120,9 +133,21 @@ public class FishingStage2and3 : MonoBehaviour
 
         reelVelocity -= gravityPower * Time.deltaTime;
         reelVelocity = Mathf.Clamp(reelVelocity, -0.003f, 0.005f);
+        
+        if (hookPosition == 0)
+        {
+            fishingScript.CountMistake();
+            reelVelocity = 0.013f;
+        }
+        if (hookPosition == 1)
+        {
+            fishingScript.Win();
+        }
         hookPosition += reelVelocity;
         hookPosition = Mathf.Clamp(hookPosition, 0, 1);
         hook.transform.position = Vector3.Lerp(bottomPivot.position, topPivot.position + new Vector3(0, 0.8f, 0), hookPosition);
+
+        
     }
 
 }

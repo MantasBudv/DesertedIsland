@@ -20,7 +20,6 @@ public class ActiveWeapon : MonoBehaviour
         }
 
         weapons = Resources.FindObjectsOfTypeAll<HotbarItem>();
-        Debug.Log(weapons.Length);
     }
 
     void Update()
@@ -45,7 +44,7 @@ public class ActiveWeapon : MonoBehaviour
     {
         foreach (GameObject weaponUI in weaponsUI)
         {
-            //Debug.Log(weaponUI.name);
+
             bool activate = false;
             foreach (HotbarItem weapon in weapons)
             {
@@ -57,7 +56,6 @@ public class ActiveWeapon : MonoBehaviour
             if (activate)
             {
                 weaponUI.SetActive(true);
-             //   Debug.Log("Veikia?");
             }
             else
             {
