@@ -1501,6 +1501,7 @@ GameObject:
   - component: {fileID: 6317059563632731757}
   - component: {fileID: 6387828302328154131}
   - component: {fileID: 2134013230228635898}
+  - component: {fileID: 6577896918039904708}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1601,3 +1602,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstep: {fileID: 6674602756997330689, guid: 357e9a06f2e50b34cb3350fb10b9acfc,
     type: 3}
+--- !u!114 &6577896918039904708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8560338553462729543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701eacf6f3620a94288f865baf9f6bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishingMinigame: {fileID: 501040370623612935, guid: e7e5fe451e40d8c4bbbfb17d9bc37d56,
+    type: 3}
+  mainCamera: {fileID: 0}
+  fishingRod: {fileID: 1121192575095444975}
+  controller: {fileID: -5727286518397389663}

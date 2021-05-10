@@ -52,6 +52,7 @@ public class CharacterController : MonoBehaviour
     public static int currentLevel;
     public static int XP;
     public static int skillPoints;
+    public static bool isNearWater;
 
 
 
@@ -62,6 +63,7 @@ public class CharacterController : MonoBehaviour
 
     private void Start()
     {
+        isNearWater = false;
         camera = Camera.main;
         if (skills == null)
             skills = new AcquiredSkills();
@@ -142,7 +144,10 @@ public class CharacterController : MonoBehaviour
             attackTime = attackRate;
             animator.SetBool("Attacking", true);
         }
-
+        if (FishingMinigameStarter.inMinigame == true)
+        {
+            moveDir = Vector2.zero;
+        }
         animator.SetFloat("Speed", movementSpeed);
     }
 
@@ -239,6 +244,10 @@ public class CharacterController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.name == "Water2")
+        {
+            isNearWater = true;
+        }
         if (collision.collider.tag == "Skeleton")
         {
             //Time.timeScale = 0f;
@@ -246,6 +255,13 @@ public class CharacterController : MonoBehaviour
             //Debug.Log("You died");
             //gameOver.SetActive(true);
             TakeDamage(1);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.name == "Water2")
+        {
+            isNearWater = false;
         }
     }
 

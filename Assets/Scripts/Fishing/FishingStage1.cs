@@ -12,40 +12,48 @@ public class FishingStage1 : MonoBehaviour
     [SerializeField] Transform bottomFishingPivot;
     [SerializeField] GameObject fishingPlot;
     [SerializeField] GameObject Stage2;
-    Transform topFishLimit;
-    Transform bottomFishLimit;
+    [SerializeField] SetupFishing fishingScript;
     [SerializeField] Transform hook;
-    float hookPosition;
     public float hookStartingVelocity = 1.2f;
     public float hookStoppingPower = 0.5f;
     public float hookVelocity;
+    private float errorTimer;
     bool moveUp;
     bool stopMoving;
+    public static bool pause;
     // Start is called before the first frame update
     void Start()
     {
+        pause = false;
+        errorTimer = 0.5f;
+        fishingScript = GetComponentInParent<SetupFishing>();
         SetupFishingPivots();
         stopMoving = false;
         moveUp = false;
         hookVelocity = hookStartingVelocity;
-    }
-
-
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        Hook();
         
     }
 
-    void Hook()
+
+    void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (pause) return;
+        if (Input.GetMouseButtonDown(0))
         {
             stopMoving = true;
             Debug.Log("YES!");
         }
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        errorTimer -= Time.deltaTime;
+        if (pause) return;
+        Hook();
+        
+    }
+    void Hook()
+    {
 
         if (stopMoving && hookVelocity >= 0)
         {
@@ -63,8 +71,9 @@ public class FishingStage1 : MonoBehaviour
                 hook.Translate(Vector2.down * hookVelocity * Time.deltaTime);
             }
         }
-        else
+        else if (errorTimer <= 0)
         {
+            
             CheckFinishedPosition();
         }
  
@@ -82,6 +91,7 @@ public class FishingStage1 : MonoBehaviour
             {
                 hookVelocity += 0.5f;
                 hookStoppingPower += 0.001f;
+
             }
         }
     }
@@ -92,6 +102,14 @@ public class FishingStage1 : MonoBehaviour
             Stage2.SetActive(true);
             this.gameObject.SetActive(false);
         }
+        else
+        {
+
+            fishingScript.CountMistake();
+            stopMoving = false;
+            hookVelocity = hookStartingVelocity;
+            errorTimer = 0.5f;
+        }
     }
     private void SetupFishingPivots()
     {
@@ -101,10 +119,9 @@ public class FishingStage1 : MonoBehaviour
         topFishingPivot.position = new Vector3(0, topPosition ,0);
         bottomFishingPivot.position = new Vector3(0, topPosition - GetRandomNumber(0.5, 1),0);
         fishingPlot.transform.localScale = new Vector3(5, (topPosition - bottomFishingPivot.position.y), 1);
-        fishingPlot.transform.position = new Vector3(0, topPosition - (topPosition - bottomFishingPivot.position.y) / 2, 0);
+        fishingPlot.transform.position = new Vector3(this.transform.position.x, topPosition - (topPosition - bottomFishingPivot.position.y) / 2, 0);
         
         fishingPlot.SetActive(true);
-        fishingPlot.transform.position = new Vector3(0, topPosition - (topPosition - bottomFishingPivot.position.y) / 2, 0);
     }
     public float GetRandomNumber(double minimum, double maximum)
     {
