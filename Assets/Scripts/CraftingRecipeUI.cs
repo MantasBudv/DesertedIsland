@@ -20,6 +20,7 @@ public class CraftingRecipeUI : MonoBehaviour
     }
 
     private Sprite[] tempSprite;
+    private bool prevention = false;
 
     public void OnCraftButtonClick()
     {
@@ -45,8 +46,8 @@ public class CraftingRecipeUI : MonoBehaviour
 
     private void SetCraftingRecipe(CraftingRecipe newCraftingRecipe)
     {
+        
         craftingRecipe = newCraftingRecipe;
-
         if(craftingRecipe != null)
         {
             int slotIndex = 0;
@@ -56,9 +57,16 @@ public class CraftingRecipeUI : MonoBehaviour
 
             // if (ItemContainer.HasEnoughOfItem())
 
-            Button b = itemSlots[slotIndex-1].gameObject.GetComponent<Button>();
-            Image[] images = itemSlots[slotIndex-1].gameObject.GetComponentsInChildren<Image>();
-            b.onClick.AddListener(delegate () { OnCraftButtonClick(); });
+            Button b = itemSlots[slotIndex - 1].gameObject.GetComponent<Button>();
+            Image[] images = itemSlots[slotIndex - 1].gameObject.GetComponentsInChildren<Image>();
+
+            if (!prevention)
+            {
+                prevention = true;
+                b.onClick.AddListener(delegate () { OnCraftButtonClick(); });
+            }
+            
+
 
             if (craftingRecipe.CanCraft(ItemContainer))
             {

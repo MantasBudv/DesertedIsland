@@ -14,6 +14,7 @@ TagManager:
   - Axe
   - Pickaxe
   - DontDisable
+  - Fishing
   layers:
   - Default
   - TransparentFX
