@@ -123,6 +123,10 @@ public class CharacterController : MonoBehaviour
         {
             movementSpeed = Mathf.Clamp(moveDir.magnitude, 0.0f, 1.0f);
         }
+        if (skills.HasAcquired(AcquiredSkills.SkillEnum.MoveSpeed))
+        {
+            movementSpeed = movementSpeed * 1.2f;
+        }
         moveDir.Normalize();
     }
 
@@ -173,6 +177,10 @@ public class CharacterController : MonoBehaviour
 
     void TakeDamage(int damage)
     {
+        if (skills.HasAcquired(AcquiredSkills.SkillEnum.ResistanceBoost))
+        {   
+            damage -= 1;
+        }
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         if (currentHealth == 0)
@@ -267,6 +275,11 @@ public class CharacterController : MonoBehaviour
 
     public void GiveXP(int XPAmount)
     {
+        if (skills.HasAcquired(AcquiredSkills.SkillEnum.XPBoost))
+        {
+            double doubleXP = XPAmount * 1.2;
+            XPAmount = (int) doubleXP;
+        }
         XP += XPAmount;
         if (XP - currentLevel * 1000 >= 1000)
         {
@@ -283,9 +296,9 @@ public class CharacterController : MonoBehaviour
     {
         return 1000 - (XP - currentLevel * 1000);
     }
-    public class AcquiredSkills
+   public class AcquiredSkills
     {
-        static int size = 1;
+        static int size = 4;
         public bool[] _hasAcquired;
         public AcquiredSkills()
         {
@@ -302,7 +315,10 @@ public class CharacterController : MonoBehaviour
         }
         public enum SkillEnum
         {
-            StaminaRegen
+            StaminaRegen,
+            MoveSpeed,
+            XPBoost,
+            ResistanceBoost
         }
 
         public void SetSkill(SkillEnum skill)
@@ -311,6 +327,15 @@ public class CharacterController : MonoBehaviour
             {
                 case SkillEnum.StaminaRegen:
                     _hasAcquired[0] = true;
+                    break;
+                case SkillEnum.MoveSpeed:
+                    _hasAcquired[1] = true;
+                    break;
+                case SkillEnum.XPBoost:
+                    _hasAcquired[2] = true;
+                    break;
+                case SkillEnum.ResistanceBoost:
+                    _hasAcquired[3] = true;
                     break;
                 default:
                     Debug.Log("Error");
@@ -326,6 +351,12 @@ public class CharacterController : MonoBehaviour
             {
                 case SkillEnum.StaminaRegen:
                     return _hasAcquired[0];
+                case SkillEnum.MoveSpeed:
+                    return _hasAcquired[1];
+                case SkillEnum.XPBoost:
+                    return _hasAcquired[2];
+                case SkillEnum.ResistanceBoost:
+                    return _hasAcquired[3];
                 default:
                     Debug.Log("Error");
                     return false;

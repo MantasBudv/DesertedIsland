@@ -134,6 +134,10 @@ public class NPCControllerAgressive : MonoBehaviour
         if (dyingTimer >= 0.6f)
         {
             var Character = GameObject.FindGameObjectWithTag("Player");
+            if (SplitCount <= 1)
+            {
+                SplitCount = 2;
+            }
             Character.GetComponent<CharacterController>().GiveXP(300);
             gameObject.SetActive(false);
             Destroy(gameObject);

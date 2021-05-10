@@ -20,6 +20,8 @@ public class NPCController : MonoBehaviour
     [SerializeField] private float scaredRange = 0.5f;
 
     [SerializeField] private GameObject itemDrop;
+
+    [SerializeField] private Animator anim;
     
     private Rigidbody2D _player;
     private Rigidbody2D _rb;
@@ -29,8 +31,8 @@ public class NPCController : MonoBehaviour
     private NpcState _state;
     
     private float dyingEnd;
-
-    public static int splitTimes = 4;
+    private bool _facingRight;
+    
 
     private void Awake()
     {
@@ -54,6 +56,7 @@ public class NPCController : MonoBehaviour
         else
         {
             if (Time.fixedTime < dyingEnd) return;
+            _player.GetComponent<CharacterController>().GiveXP(160);
             Instantiate(itemDrop, _rb.position, Quaternion.identity);
             gameObject.SetActive(false);
             Destroy(gameObject);
@@ -74,16 +77,27 @@ public class NPCController : MonoBehaviour
     {
         if (_state.Action == CurrentAction.IdleStanding)
         {
+            anim.SetBool("IsMoving", false);
             _rb.velocity = new Vector2(0.0f, 0.0f);
             return;
         }
 
+        anim.SetBool("IsMoving", true);
         var movementSpeed = (_state.Action == CurrentAction.Scared) ? moveSpeedScared : moveSpeedRegular;
         
         Vector2 positionMovement = new Vector2(
             Mathf.Cos(_rotationRads),
             Mathf.Sin(_rotationRads)
         );
+        
+        if (positionMovement.x > 0 && !_facingRight)
+        {
+            Flip();
+        }
+        else if (positionMovement.x < 0 && _facingRight)
+        {
+            Flip();
+        }
         _rb.velocity = positionMovement * movementSpeed;
     }
 
@@ -100,24 +114,42 @@ public class NPCController : MonoBehaviour
         _state.Update(_distanceToPlayer, scaredRange, concernedRange);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        var otherObject = other.gameObject;
-        if (otherObject.CompareTag("Player") && _state.Action != CurrentAction.Dying)
+        if (other.CompareTag("Weapon"))
         {
-            _state.Action = CurrentAction.Dying;
-            dyingEnd = Time.fixedTime + 2.0f;
-            gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-            _rb.velocity = new Vector2(0.0f, 0.0f);
-            // foreach(var c in gameObject.GetComponentsInChildren<Collider2D>())
-            // {
-            //     if(c.isTrigger) c.enabled = false;
-            // }
+            commitDying();
         }
-        else if (_state.Action != CurrentAction.Dying)
+        if (other.CompareTag("Throwable"))
         {
-            _rotationRads += Mathf.PI + UnityEngine.Random.Range(-Mathf.PI / 4, Mathf.PI / 4);
+            Destroy(other.gameObject);
+            commitDying();
         }
+    }
+
+    private void commitDying()
+    {
+        if (_state.Action == CurrentAction.Dying)
+        {
+            return;
+        }
+        _state.Action = CurrentAction.Dying;
+        anim.SetBool("IsDying", true);
+        dyingEnd = Time.fixedTime + 1.0f;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        _rb.velocity = new Vector2(0.0f, 0.0f);
+    }
+    
+    
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        _facingRight = !_facingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     private class NpcState
