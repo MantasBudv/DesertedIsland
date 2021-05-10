@@ -21,6 +21,7 @@ public class Boat : MonoBehaviour
     [SerializeField] ItemAmount[] level1;
     [SerializeField] ItemAmount[] level2;
 
+    private List<ItemAmount[]> ItemsNeeded = new List<ItemAmount[]>();
 
     private int boatLevel = 1;
     private bool _playerInRange = false;
@@ -35,8 +36,16 @@ public class Boat : MonoBehaviour
 
     private void Start()
     {
+        
         boatLevel = values.GetBoatLevel();
-        ChangeSprites();
+        
+        ItemsNeeded.Add(level1);
+        ItemsNeeded.Add(level2);
+        Debug.Log(ItemsNeeded);
+        if (boatLevel != 3)
+        {
+            ChangeSprites();
+        }
     }
 
 
@@ -72,22 +81,13 @@ public class Boat : MonoBehaviour
 
     private bool CanUpgrade()
     {
-        if (boatLevel == 1)
+        
+        if ((inventory.ItemCount(ItemsNeeded[boatLevel-1][0].Item) >= ItemsNeeded[boatLevel - 1][0].Amount) &&
+                (inventory.ItemCount(ItemsNeeded[boatLevel - 1][1].Item) >= ItemsNeeded[boatLevel - 1][1].Amount))
         {
-            if ((inventory.ItemCount(level1[0].Item) >= level1[0].Amount) &&
-                    (inventory.ItemCount(level1[1].Item) >= level1[1].Amount))
-            {
-                return true;
-            }
+            return true;
         }
-        if (boatLevel == 2)
-        {
-            if ((inventory.ItemCount(level2[0].Item) >= level2[0].Amount) &&
-                    (inventory.ItemCount(level2[1].Item) >= level2[1].Amount))
-            {
-                return true;
-            }
-        }
+
 
         Debug.LogError("Cant upgrade");
         return false;
@@ -104,102 +104,57 @@ public class Boat : MonoBehaviour
             box.SetActive(false);
         }
         Instantiate(poofPrefab, gameObject.transform.position, Quaternion.identity);
-        ChangeText();
-        ChangeSprites();
+        if (boatLevel != 3)
+        {
+            ChangeText();
+            ChangeSprites();
+        }
+        
     }
 
     private void RemoveBoatMaterials()
     {
-        if (boatLevel == 1)
+        for (int i = 0; i < ItemsNeeded[boatLevel-1][0].Amount; i++)
         {
-            for (int i = 0; i < level1[0].Amount; i++)
-            {
-                inventory.RemoveItem(level1[0].Item.name);
-            }
-            for (int i = 0; i < level1[1].Amount; i++)
-            {
-                inventory.RemoveItem(level1[1].Item.name);
-            }
+            inventory.RemoveItem(ItemsNeeded[boatLevel - 1][0].Item.name);
         }
-        if (boatLevel == 2)
+        for (int i = 0; i < ItemsNeeded[boatLevel - 1][1].Amount; i++)
         {
-            for (int i = 0; i < level2[0].Amount; i++)
-            {
-                inventory.RemoveItem(level2[0].Item.name);
-            }
-            for (int i = 0; i < level2[1].Amount; i++)
-            {
-                inventory.RemoveItem(level2[1].Item.name);
-            }
+            inventory.RemoveItem(ItemsNeeded[boatLevel - 1][1].Item.name);
         }
+
     }
 
     private void ChangeSprites()
     {
         tempSprite = Resources.LoadAll<Sprite>("ItemSprites/Original_items");
         gameObject.GetComponent<SpriteRenderer>().sprite = boatSprites[boatLevel - 1];
-        if (boatLevel == 1)
-        {
-            itemSprites[0].sprite = tempSprite[level1[0].Item.indexOnSheet]; 
-            itemSprites[1].sprite = tempSprite[level1[1].Item.indexOnSheet]; 
-        }
-        if (boatLevel == 2)
-        {
-            itemSprites[0].sprite = tempSprite[level2[0].Item.indexOnSheet];
-            itemSprites[1].sprite = tempSprite[level2[1].Item.indexOnSheet];
-        }
+
+        itemSprites[0].sprite = tempSprite[ItemsNeeded[boatLevel - 1][0].Item.indexOnSheet];
+        itemSprites[1].sprite = tempSprite[ItemsNeeded[boatLevel - 1][1].Item.indexOnSheet];
+
     }
 
     private void ChangeText()
     {
-        if (boatLevel == 1)
+        Texts[0].text = inventory.ItemCount(ItemsNeeded[boatLevel - 1][0].Item).ToString() + "/" + ItemsNeeded[boatLevel - 1][0].Amount;
+        if (inventory.ItemCount(ItemsNeeded[boatLevel - 1][0].Item) < ItemsNeeded[boatLevel - 1][0].Amount)
         {
-            
-            Texts[0].text = inventory.ItemCount(level1[0].Item).ToString() + "/" + level1[0].Amount;
-            if (inventory.ItemCount(level1[0].Item) < level1[0].Amount)
-            {
-                Texts[0].color = new Color(255, 0, 0);
-            }
-            else
-            {
-                Texts[0].color = new Color(0, 255, 0);
-            }
-           
-            Texts[1].text = inventory.ItemCount(level1[1].Item).ToString() + "/" + level1[1].Amount;
-            if (inventory.ItemCount(level1[1].Item) < level1[1].Amount)
-            {
-                Texts[1].color = new Color(255, 0, 0);
-            }
-            else
-            {
-                Texts[1].color = new Color(0, 255, 0);
-            }
-            
+            Texts[0].color = new Color(255, 0, 0);
+        }
+        else
+        {
+            Texts[0].color = new Color(0, 255, 0);
         }
 
-        if (boatLevel == 2)
+        Texts[1].text = inventory.ItemCount(ItemsNeeded[boatLevel - 1][1].Item).ToString() + "/" + ItemsNeeded[boatLevel - 1][1].Amount;
+        if (inventory.ItemCount(ItemsNeeded[boatLevel - 1][1].Item) < ItemsNeeded[boatLevel - 1][1].Amount)
         {
-
-            Texts[0].text = inventory.ItemCount(level2[0].Item).ToString() + "/" + level2[0].Amount;
-            if (inventory.ItemCount(level2[0].Item) < level2[0].Amount)
-            {
-                Texts[0].color = new Color(255, 0, 0);
-            }
-            else
-            {
-                Texts[0].color = new Color(0, 255, 0);
-            }
-
-            Texts[1].text = inventory.ItemCount(level2[1].Item).ToString() + "/" + level2[1].Amount;
-            if (inventory.ItemCount(level2[1].Item) < level2[1].Amount)
-            {
-                Texts[1].color = new Color(255, 0, 0);
-            }
-            else
-            {
-                Texts[1].color = new Color(0, 255, 0);
-            }
-
+            Texts[1].color = new Color(255, 0, 0);
+        }
+        else
+        {
+            Texts[1].color = new Color(0, 255, 0);
         }
     }
 }
