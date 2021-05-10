@@ -121,11 +121,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 55
-        height: 16
+        y: 106
+        width: 56
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,36 +138,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boat 1_1
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 112
-        width: 55
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0b5e16c16346f510800000000000000
-      internalID: 1582526406282074890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Boat 1_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 56
-        width: 55
-        height: 26
+        y: 46
+        width: 56
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,36 +159,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boat 1_3
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 56
-        width: 55
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d085bd82db2187630800000000000000
-      internalID: 3924907678896969741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Boat 1_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 55
-        height: 26
+        width: 56
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,27 +175,6 @@ TextureImporter:
       bones: []
       spriteID: 80391ac59f5832850800000000000000
       internalID: 6351067205569975048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boat 1_5
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 55
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acae4be03b2fad020800000000000000
-      internalID: 2367471404996422346
       vertices: []
       indices: 
       edges: []

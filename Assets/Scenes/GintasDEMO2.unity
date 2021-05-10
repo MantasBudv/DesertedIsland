@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 7173086145112061267, guid: 02c6ec311e25d4f4eb7dba78766fd6f8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.150001
+      value: -4.1500006
       objectReference: {fileID: 0}
     - target: {fileID: 7173086145112061267, guid: 02c6ec311e25d4f4eb7dba78766fd6f8,
         type: 3}
@@ -336,6 +336,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377741502, guid: b8ff438da6c11f346aca117c4361055c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 215123139717700960, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -545,6 +549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037144821337646089, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3075193388235583940, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
@@ -746,6 +755,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5676982538275868780, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7092580953370923406, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -805,6 +819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187005022226065008, guid: b8ff438da6c11f346aca117c4361055c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8406867990432011335, guid: b8ff438da6c11f346aca117c4361055c,
         type: 3}
@@ -1351,6 +1370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882587277699087854, guid: 3979e0b143e74024792acbd17160ee52,
         type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882587277699087854, guid: 3979e0b143e74024792acbd17160ee52,
+        type: 3}
       propertyPath: sceneName
       value: GintasDEMO
       objectReference: {fileID: 0}
@@ -1651,12 +1675,18 @@ MonoBehaviour:
     maxHP: 0
     currSTA: 0
     maxSTA: 0
+    inventory: []
+    invQuant: 
+    HotbarLevels: 
     timer: 0
     dayCount: 0
     musicVol: 0
     soundVol: 0
+    currSkills: 
+    currXP: 0
+    currSkillPoints: 0
+    currLevel: 0
   hasLoaded: 0
-  player: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: bc5820152c6df2e459139beed8ed2436, type: 2}
   loadingScreen: {fileID: 1238214115}
   slider: {fileID: 433800300}

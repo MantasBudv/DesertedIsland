@@ -12,6 +12,7 @@ public class Boat : MonoBehaviour
     [SerializeField] GameObject box;
     [SerializeField] Sprite[] boatSprites;
     [SerializeField] GameObject poofPrefab;
+    [SerializeField] TextMeshProUGUI timeTaken;
 
     [Header("Public variables")]
     public Inventory inventory;
@@ -26,17 +27,21 @@ public class Boat : MonoBehaviour
     private int boatLevel = 1;
     private bool _playerInRange = false;
     private Sprite[] tempSprite;
+    private GameObject gameOverBox;
 
 
     private void OnValidate()
     {
         inventory = FindObjectOfType<Inventory>();
         values = FindObjectOfType<GMStaticValues>();
+        
     }
 
     private void Start()
     {
-        
+        gameOverBox = GameObject.FindGameObjectWithTag("GameOverScreen");
+        timeTaken = GameObject.FindGameObjectWithTag("TimeText").GetComponent<TextMeshProUGUI>();
+        gameOverBox.SetActive(false);
         boatLevel = values.GetBoatLevel();
         
         ItemsNeeded.Add(level1);
@@ -102,6 +107,12 @@ public class Boat : MonoBehaviour
         if (boatLevel == 3)
         {
             box.SetActive(false);
+            gameOverBox.SetActive(true);
+            int day;
+            float time;
+            FindObjectOfType<Timer>().GetTime(out time, out day);
+            timeTaken.text = "Day " + day.ToString() + " " + System.TimeSpan.FromMinutes(Mathf.Round(time / 10) * 10).ToString(@"hh\:mm");
+            Time.timeScale = 0f;
         }
         Instantiate(poofPrefab, gameObject.transform.position, Quaternion.identity);
         if (boatLevel != 3)

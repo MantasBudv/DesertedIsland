@@ -15,6 +15,9 @@ TagManager:
   - Pickaxe
   - DontDisable
   - Fishing
+  - BlackScreen
+  - GameOverScreen
+  - TimeText
   layers:
   - Default
   - TransparentFX
