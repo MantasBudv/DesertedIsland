@@ -55,6 +55,7 @@ public class Inventory : MonoBehaviour , IItemContainer
     {
         Item itemToRemove = items.Find(item => item.name == name);
         if (itemToRemove) {
+            Debug.Log("removing item" + itemToRemove.name);
             int index = items.FindIndex(i => itemToRemove.Equals(i));
             if (itemsQuantity[index] != 1) {
                 itemsQuantity[index]--;
