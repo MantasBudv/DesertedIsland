@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GintasDEMO.unity
     guid: 7c4a62353869caa4188f1cce293e285f
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: f987ffebf2ab78e4698eebf05ff9e2fa
   m_configObjects: {}

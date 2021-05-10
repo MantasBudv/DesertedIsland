@@ -359,7 +359,7 @@ MonoBehaviour:
   fishingScript: {fileID: 0}
   hook: {fileID: 501040369741926157}
   hookStartingVelocity: 1.2
-  hookStoppingPower: 0.5
+  hookStoppingPower: 0.1
   hookVelocity: 0
 --- !u!1 &501040369227132049
 GameObject:

@@ -12,8 +12,16 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         anim = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Animator>();
-        anim.gameObject.SetActive(false);
+        Invoke("Delay", 5);
+            
     }
+
+    void Delay()
+    {
+        anim.gameObject.SetActive(false);
+        return;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) 
@@ -21,7 +29,6 @@ public class ChangeScene : MonoBehaviour
             anim.gameObject.SetActive(true);
             anim.Play("FadeInBlack");
             anim.SetInteger("SceneNum",SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/"+ sceneName +".unity"));
-            Debug.Log(SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/" + sceneName + ".unity"));
             
             //SceneManager.LoadScene(sceneName);
         }

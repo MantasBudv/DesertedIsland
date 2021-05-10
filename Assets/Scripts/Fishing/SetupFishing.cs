@@ -29,7 +29,6 @@ public class SetupFishing : MonoBehaviour
     void initiateGame()
     { 
         stage1.SetActive(true);
-        Debug.Log("Pradedu");
     }
 
     public void CountMistake()

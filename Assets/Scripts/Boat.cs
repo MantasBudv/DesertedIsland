@@ -56,11 +56,15 @@ public class Boat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && boatLevel != 3)
+        if (other.gameObject.CompareTag("Player"))
         {
-            box.SetActive(true);
+            if (boatLevel != 3)
+            {
+                box.SetActive(true);
+                ChangeText();
+            }
             _playerInRange = true;
-            ChangeText();
+            
         }
     }
 
@@ -81,12 +85,24 @@ public class Boat : MonoBehaviour
             {
                 UpgradeBoat();
             }
+            else if (boatLevel == 3)
+            {
+                gameOverBox.SetActive(true);
+                int day;
+                float time;
+                FindObjectOfType<Timer>().GetTime(out time, out day);
+                timeTaken.text = "Day " + day.ToString() + " " + System.TimeSpan.FromMinutes(Mathf.Round(time / 10) * 10).ToString(@"hh\:mm");
+                Time.timeScale = 0f;
+            }
         }
     }
 
     private bool CanUpgrade()
     {
-        
+        if (boatLevel == 3)
+        {
+            return false;
+        }
         if ((inventory.ItemCount(ItemsNeeded[boatLevel-1][0].Item) >= ItemsNeeded[boatLevel - 1][0].Amount) &&
                 (inventory.ItemCount(ItemsNeeded[boatLevel - 1][1].Item) >= ItemsNeeded[boatLevel - 1][1].Amount))
         {
@@ -107,12 +123,6 @@ public class Boat : MonoBehaviour
         if (boatLevel == 3)
         {
             box.SetActive(false);
-            gameOverBox.SetActive(true);
-            int day;
-            float time;
-            FindObjectOfType<Timer>().GetTime(out time, out day);
-            timeTaken.text = "Day " + day.ToString() + " " + System.TimeSpan.FromMinutes(Mathf.Round(time / 10) * 10).ToString(@"hh\:mm");
-            Time.timeScale = 0f;
         }
         Instantiate(poofPrefab, gameObject.transform.position, Quaternion.identity);
         if (boatLevel != 3)
