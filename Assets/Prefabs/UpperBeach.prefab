@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4832176528242862351}
   - component: {fileID: 1597796089907731082}
   m_Layer: 0
-  m_Name: Water_Border
+  m_Name: Water2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
