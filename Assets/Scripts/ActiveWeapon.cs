@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActiveWeapon : MonoBehaviour
 {
     [SerializeField]
-     List<GameObject> weaponsUI = new List<GameObject>();
+    List<GameObject> weaponsUI = new List<GameObject>();
     [SerializeField]
     HotbarItem[] weapons;
     void Start()
@@ -15,7 +15,7 @@ public class ActiveWeapon : MonoBehaviour
         {
             if (t.gameObject.name != "Hand" && t.gameObject.tag != "DontDisable")
             {
-                weaponsUI.Add(t.gameObject);    
+                weaponsUI.Add(t.gameObject);
             }
         }
 
@@ -28,21 +28,24 @@ public class ActiveWeapon : MonoBehaviour
         setActiveWeapon();
         //updateSprites();
     }
-    void updateSprites() {
-        foreach (GameObject weaponUI in weaponsUI) {
+    void updateSprites()
+    {
+        foreach (GameObject weaponUI in weaponsUI)
+        {
             foreach (HotbarItem weapon in weapons)
             {
                 if (weaponUI.name == weapon.name && weapon.active == true)
                 {
-                    weaponUI.GetComponent<SpriteRenderer>().sprite = weapon.icon[weapon.level];
+                    weaponUI.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = weapon.icon[weapon.level];
                 }
             }
         }
     }
-    void setActiveWeapon() 
+    void setActiveWeapon()
     {
         foreach (GameObject weaponUI in weaponsUI)
         {
+            Debug.Log(weaponUI.name);
             bool activate = false;
             foreach (HotbarItem weapon in weapons)
             {
@@ -54,6 +57,7 @@ public class ActiveWeapon : MonoBehaviour
             if (activate)
             {
                 weaponUI.SetActive(true);
+                Debug.Log("Veikia?");
             }
             else
             {
