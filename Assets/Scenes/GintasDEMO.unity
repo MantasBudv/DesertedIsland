@@ -3636,7 +3636,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 1e0cdb15debd2f14db3ccbc04bfe0529, type: 3}
+  m_Sprite: {fileID: -230587871185427975, guid: 802c113f658da904fbe8d5692f1bbd67,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3678,7 +3679,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.2916667, y: 0.6666667}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3704,7 +3705,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.2916667, y: 0.6666667}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3733,9 +3734,9 @@ MonoBehaviour:
   - {fileID: 1421434587}
   box: {fileID: 1190538280}
   boatSprites:
-  - {fileID: 21300000, guid: 1e0cdb15debd2f14db3ccbc04bfe0529, type: 3}
-  - {fileID: 21300000, guid: 498144baf7e52904f93c044416338a54, type: 3}
-  - {fileID: 21300000, guid: d60c040844de78c40be474be90ec93e1, type: 3}
+  - {fileID: -230587871185427975, guid: 802c113f658da904fbe8d5692f1bbd67, type: 3}
+  - {fileID: 1582526406282074890, guid: 802c113f658da904fbe8d5692f1bbd67, type: 3}
+  - {fileID: 2367471404996422346, guid: 802c113f658da904fbe8d5692f1bbd67, type: 3}
   poofPrefab: {fileID: 3580651965534068907, guid: 93c70b894067f89449de014a365601d2,
     type: 3}
   inventory: {fileID: 660848458}
