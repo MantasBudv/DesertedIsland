@@ -44,6 +44,7 @@ public class ActiveWeapon : MonoBehaviour
     {
         foreach (GameObject weaponUI in weaponsUI)
         {
+
             bool activate = false;
             foreach (HotbarItem weapon in weapons)
             {
