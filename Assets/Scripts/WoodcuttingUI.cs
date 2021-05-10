@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class WoodcuttingUI : MonoBehaviour
@@ -26,6 +27,7 @@ public class WoodcuttingUI : MonoBehaviour
     void Update()
     {
         meleeAttack = Input.GetButtonDown("Fire1");
+
         if (meleeAttack && axe.activeInHierarchy)
         {
             if (GameIsWCMenu == false)
