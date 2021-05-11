@@ -74,6 +74,7 @@ public class SaveManager : MonoBehaviour
         instance.activeSave.currXP = CharacterController.XP;
         instance.activeSave.currLevel = CharacterController.currentLevel;
         instance.activeSave.currSkillPoints = CharacterController.skillPoints;
+        instance.activeSave.crabsKilled = CharacterController.crabsKilled;
         
         instance.activeSave.inventory = FindObjectOfType<Inventory>().GetItems();                   //Inventory
         instance.activeSave.invQuant = FindObjectOfType<Inventory>().GetItemsQuant();               
@@ -119,7 +120,8 @@ public class SaveManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").transform.position = instance.activeSave.playerPosition;
         GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().LoadStats(instance.activeSave.maxHP, instance.activeSave.currHP,
                                                              instance.activeSave.maxSTA, instance.activeSave.currSTA, instance.activeSave.currSkills,
-                                                             instance.activeSave.currXP, instance.activeSave.currSkillPoints, instance.activeSave.currLevel);
+                                                             instance.activeSave.currXP, instance.activeSave.currSkillPoints, instance.activeSave.currLevel,
+                                                             instance.activeSave.crabsKilled);
         FindObjectOfType<Inventory>().LoadInventory(instance.activeSave.inventory, instance.activeSave.invQuant);
         audioMixer.SetFloat("Music", instance.activeSave.musicVol);
         audioMixer.SetFloat("Sounds", instance.activeSave.soundVol);
@@ -174,4 +176,5 @@ public class SaveData
     public int currXP;
     public int currSkillPoints;
     public int currLevel;
+    public int crabsKilled;
 }

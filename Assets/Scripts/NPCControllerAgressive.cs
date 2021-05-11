@@ -133,6 +133,7 @@ public class NPCControllerAgressive : MonoBehaviour
         dyingTimer += Time.deltaTime;
         if (dyingTimer >= 0.6f)
         {
+            CharacterController.crabsKilled += 1;
             var Character = GameObject.FindGameObjectWithTag("Player");
             if (SplitCount <= 1)
             {

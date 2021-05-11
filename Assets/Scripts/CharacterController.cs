@@ -54,6 +54,8 @@ public class CharacterController : MonoBehaviour
     public static int skillPoints;
     public static bool isNearWater;
 
+    public static int crabsKilled;
+
 
 
     private void Awake() 
@@ -200,7 +202,7 @@ public class CharacterController : MonoBehaviour
     }
 
     public void LoadStats(int maxHP, int currHP, int maxSTA, int currSTA, bool[] currSkills,
-        int currXP, int currSkillPoints, int currLevel)
+        int currXP, int currSkillPoints, int currLevel, int crabsKilled)
     {
         maxHealth = maxHP;
         currentHealth = currHP;
@@ -212,6 +214,7 @@ public class CharacterController : MonoBehaviour
         XP = currXP;
         skillPoints = currSkillPoints;
         currentLevel = currLevel;
+        CharacterController.crabsKilled = crabsKilled;
         //Debug.Log(skills.HasAcquired(AcquiredSkills.SkillEnum.StaminaRegen));
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
