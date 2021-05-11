@@ -56,6 +56,10 @@ public class CharacterController : MonoBehaviour
 
     public static int crabsKilled;
 
+    public GameObject line;
+    public GameObject crab;
+    bool dead = false;
+    public GameObject post;
 
 
     private void Awake() 
@@ -86,6 +90,9 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        if (dead)
+            return;
+
         GetInputs();
         Move();
         CheckRanged();
@@ -187,10 +194,32 @@ public class CharacterController : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if (currentHealth == 0)
         {
-            Time.timeScale = 0f;
-            gameObject.SetActive(false);
+            //Time.timeScale = 0f;
+            //gameObject.SetActive(false);
+            line.SetActive(true);
+            foreach (var item in gameObject.GetComponentsInChildren<SpriteRenderer>())
+            {
+                item.enabled = false;
+            }
+            foreach (var item in GameObject.FindGameObjectsWithTag("Skeleton"))
+            {
+                Destroy(item);
+            }
+            dead = true;
+            post.SetActive(true);
+            gameObject.GetComponentInChildren<CapsuleCollider2D>().enabled = false;
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+            Vector3 pos = camera.gameObject.transform.position;
+            pos.z = 1;
             Debug.Log("You died");
             gameOver.SetActive(true);
+            
+            for (int i = 0; i < crabsKilled; i++)
+            {
+                float offset = UnityEngine.Random.Range(-2, 2);
+                pos.x = pos.x + offset;
+                Instantiate(crab, pos, Quaternion.identity);
+            }
         }
         
     }

@@ -46,7 +46,7 @@ public class Boat : MonoBehaviour
         
         ItemsNeeded.Add(level1);
         ItemsNeeded.Add(level2);
-        Debug.Log(ItemsNeeded);
+        //Debug.Log(ItemsNeeded);
         if (boatLevel != 3)
         {
             ChangeSprites();

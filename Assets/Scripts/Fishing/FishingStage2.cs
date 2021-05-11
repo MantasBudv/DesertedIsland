@@ -80,7 +80,7 @@ public class FishingStage2 : MonoBehaviour
             fish.transform.parent = hook;
             float distance = topPivot.position.y - bottomPivot.position.y + 0.8f;
             hookPosition = (hook.position.y - bottomPivot.position.y) / distance;
-            Debug.Log(hookPosition);
+            //Debug.Log(hookPosition);
         }
         else
         {

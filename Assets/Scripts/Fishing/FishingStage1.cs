@@ -41,7 +41,7 @@ public class FishingStage1 : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             stopMoving = true;
-            Debug.Log("YES!");
+            //Debug.Log("YES!");
         }
     }
     // Update is called once per frame
