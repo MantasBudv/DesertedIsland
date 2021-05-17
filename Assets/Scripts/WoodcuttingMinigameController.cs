@@ -66,7 +66,8 @@ public class WoodcuttingMinigameController : MonoBehaviour
         if (attempts <= 0)
         {
             var Character = GameObject.FindGameObjectWithTag("Player");
-            Character.GetComponent<CharacterController>().GiveXP(50);
+            if (collectedWood != 0)
+                Character.GetComponent<CharacterController>().GiveXP(50);
             WoodcuttingUI.GameIsWCMenu = false;
             gameObject.SetActive(false);
             for (int i = 0; i < collectedWood; i++)

@@ -1,11 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using System.Transactions;
-using Unity.Mathematics;
-using UnityEditor.UI;
-using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class AmogusNPCController : MonoBehaviour

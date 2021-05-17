@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pickaxe
   icon:
-  - {fileID: 51363136116004566, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 3835581258683598376, guid: 2792a7adba4fddf4cb342713366eb173, type: 3}
   - {fileID: 0}
   level: 0
   key: 3
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Sword
   icon:
-  - {fileID: -8644889942409211090, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 3295785387815936098, guid: 2792a7adba4fddf4cb342713366eb173, type: 3}
   - {fileID: 2451002373052964623, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
   level: 0
   key: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fishing
   icon:
-  - {fileID: 8956002981994491068, guid: c028984257d619d4c9f1cf614fc23c53, type: 3}
+  - {fileID: 8741875855807928498, guid: 2792a7adba4fddf4cb342713366eb173, type: 3}
   - {fileID: 0}
   level: 0
   key: 0

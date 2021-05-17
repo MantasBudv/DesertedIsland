@@ -27,9 +27,10 @@ public class Inventory : MonoBehaviour , IItemContainer
     public List<int> itemsQuantity = new List<int>();
     public bool AddItem (Item item) 
     {
-        if (items.Contains(item)) 
+        if (ContainsItem(item.ItemName)) 
         {
-            int index = items.FindIndex(i => item.Equals(i));
+            //int index = items.FindIndex(i => item.Equals(i));
+            int index = GetItemIndex(item.ItemName);
             itemsQuantity[index]++;
             if (onItemChangedCallback != null)
             {
@@ -53,9 +54,9 @@ public class Inventory : MonoBehaviour , IItemContainer
     }
     public void RemoveItem (string name) 
     {
-        Item itemToRemove = items.Find(item => item.name == name);
+        Item itemToRemove = items.Find(item => item.ItemName == name);
         if (itemToRemove) {
-            Debug.Log("removing item" + itemToRemove.name);
+            Debug.Log("removing item" + itemToRemove.ItemName);
             int index = items.FindIndex(i => itemToRemove.Equals(i));
             if (itemsQuantity[index] != 1) {
                 itemsQuantity[index]--;
@@ -70,6 +71,16 @@ public class Inventory : MonoBehaviour , IItemContainer
         }
     }
 
+    private int GetItemIndex (string name)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].ItemName == name)
+                return i;
+        }
+        return -1;
+    }
+
     public List<Item> GetItems()
     {
         return items;
@@ -78,7 +89,7 @@ public class Inventory : MonoBehaviour , IItemContainer
     public bool ContainsItem(string name) {
         bool exists = false;
         GetItems().ForEach(item => {
-            if (item.name == name) {
+            if (item.ItemName == name) {
                 exists = true;
             }
         });

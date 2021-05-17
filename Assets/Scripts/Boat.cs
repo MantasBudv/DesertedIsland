@@ -137,11 +137,11 @@ public class Boat : MonoBehaviour
     {
         for (int i = 0; i < ItemsNeeded[boatLevel-1][0].Amount; i++)
         {
-            inventory.RemoveItem(ItemsNeeded[boatLevel - 1][0].Item.name);
+            inventory.RemoveItem(ItemsNeeded[boatLevel - 1][0].Item.ItemName);
         }
         for (int i = 0; i < ItemsNeeded[boatLevel - 1][1].Amount; i++)
         {
-            inventory.RemoveItem(ItemsNeeded[boatLevel - 1][1].Item.name);
+            inventory.RemoveItem(ItemsNeeded[boatLevel - 1][1].Item.ItemName);
         }
 
     }

@@ -5,10 +5,10 @@ using System.Xml.Serialization;
 [System.Serializable]
 public class Item : ScriptableObject
 {
-    new public string name = "New Item";
+    new public string ItemName = "New Item";
     public int indexOnSheet;
     public virtual void Use () 
     {
-        Debug.Log("Using " + name);
+        Debug.Log("Using " + ItemName);
     }
 }

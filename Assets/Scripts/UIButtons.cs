@@ -30,7 +30,7 @@ public class UIButtons : MonoBehaviour
         if (Input.GetButtonDown("Escape"))
         {
             Debug.Log("exiting");
-            ExitGame();
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

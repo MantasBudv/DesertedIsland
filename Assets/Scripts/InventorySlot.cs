@@ -16,7 +16,7 @@ public class InventorySlot : MonoBehaviour
     {
         item = newItem;
         //icon.sprite = item.icon;
-        itemName.GetComponent<TMPro.TextMeshProUGUI>().text = item.name;
+        itemName.GetComponent<TMPro.TextMeshProUGUI>().text = item.ItemName;
         tempSprite = Resources.LoadAll<Sprite>("ItemSprites/Original_items");
         icon.sprite = tempSprite[item.indexOnSheet];
         icon.enabled = true;
