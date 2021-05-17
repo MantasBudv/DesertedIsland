@@ -6,9 +6,11 @@ public class ChangeScene : MonoBehaviour
 {
     [SerializeField]
     private string sceneName;
+    [SerializeField] private int spawnPoint;
     [SerializeField] Animator anim;
 
-    private void Start()
+
+    private void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         anim = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Animator>();
@@ -16,9 +18,11 @@ public class ChangeScene : MonoBehaviour
             
     }
 
+    
+
     void Delay()
     {
-        anim.gameObject.SetActive(false);
+        //anim.gameObject.SetActive(false);
         return;
     }
 
@@ -27,6 +31,7 @@ public class ChangeScene : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             anim.gameObject.SetActive(true);
+            FindObjectOfType<CharacterController>().SetSpawnPoint(spawnPoint);
             anim.Play("FadeInBlack");
             anim.SetInteger("SceneNum",SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/"+ sceneName +".unity"));
             
@@ -36,8 +41,12 @@ public class ChangeScene : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        anim = GameObject.FindGameObjectWithTag("BlackScreen").GetComponent<Animator>();
+        Time.timeScale = 1f;
+        Debug.Log(anim);
+        anim.gameObject.SetActive(true);
         anim.Play("FadeOutBlack");
-        anim.gameObject.SetActive(false);
+        //anim.gameObject.SetActive(false);
     }
     
 }

@@ -36,7 +36,7 @@ public class CraftingRecipe : ScriptableObject
             {
                 for (int i = 0; i < itemAmount.Amount; i++)
                 {
-                    itemContainer.RemoveItem(itemAmount.Item.name);
+                    itemContainer.RemoveItem(itemAmount.Item.ItemName);
                 }
             }
 

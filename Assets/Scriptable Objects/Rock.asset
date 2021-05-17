@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ddb6bd3f126714a8ae6423ea886f19, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  name: Shiny Rock
+  ItemName: Rock
   indexOnSheet: 1

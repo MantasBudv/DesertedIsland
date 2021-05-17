@@ -53,19 +53,29 @@ public class CharacterController : MonoBehaviour
     public static int XP;
     public static int skillPoints;
     public static bool isNearWater;
+    public static bool isNearTree;
 
     public static int crabsKilled;
 
-
+    private List<GameObject> spawnpoints = new List<GameObject>();
+    public static int spawnIndex = 0;
 
     private void Awake() 
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public void SetSpawnPoint(int ind)
+    {
+        spawnIndex = ind;
+    }
+
     private void Start()
     {
+        GetSpawnPoints();
+        gameObject.transform.position = spawnpoints[spawnIndex].transform.position;
         isNearWater = false;
+        isNearTree = false;
         camera = Camera.main;
         if (skills == null)
             skills = new AcquiredSkills();
@@ -82,6 +92,15 @@ public class CharacterController : MonoBehaviour
         staminaBar.SetMaxStamina(maxStamina);
         staminaBar.SetStamina(currentStamina);
         InvokeRepeating("RegenStamina", staminaRegenTime, staminaRegenTime);
+    }
+
+    private void GetSpawnPoints()
+    {
+        var temp = GameObject.FindGameObjectsWithTag("spawnpoint");
+        foreach (var item in temp)
+        {
+            spawnpoints.Add(item);
+        }
     }
 
     void Update()
@@ -177,7 +196,7 @@ public class CharacterController : MonoBehaviour
         Inventory.instance.RemoveItem("Shiny Rock");
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (skills.HasAcquired(AcquiredSkills.SkillEnum.ResistanceBoost))
         {   
@@ -259,6 +278,10 @@ public class CharacterController : MonoBehaviour
         {
             isNearWater = true;
         }
+        if (collision.collider.name == "Tree_bottom")
+        {
+            isNearTree = true;
+        }
         if (collision.collider.tag == "Skeleton")
         {
             //Time.timeScale = 0f;
@@ -273,6 +296,10 @@ public class CharacterController : MonoBehaviour
         if (collision.collider.name == "Water2")
         {
             isNearWater = false;
+        }
+        if (collision.collider.name == "Tree_bottom")
+        {
+            isNearTree = false;
         }
     }
 

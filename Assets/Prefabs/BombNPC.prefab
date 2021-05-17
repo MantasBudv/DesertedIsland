@@ -87,6 +87,7 @@ MonoBehaviour:
   anim: {fileID: 8503467611776646468}
   poofPrefab: {fileID: 3580651965534068907, guid: 93c70b894067f89449de014a365601d2,
     type: 3}
+  explodeDist: 2
 --- !u!1 &8503467611776646471
 GameObject:
   m_ObjectHideFlags: 0

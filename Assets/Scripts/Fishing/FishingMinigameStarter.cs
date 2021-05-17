@@ -48,7 +48,7 @@ public class FishingMinigameStarter : MonoBehaviour
     private void StartFishing()
     {
         
-        Vector3 pos = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, 0);
+        Vector3 pos = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y - 1.5f, 0);
         instance = Instantiate(fishingMinigame,pos, Quaternion.identity);
         inMinigame = true;
         Invoke("DisableController", 0.1f);

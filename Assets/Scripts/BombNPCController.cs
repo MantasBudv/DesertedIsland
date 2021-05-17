@@ -1,11 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using System.Transactions;
-using Unity.Mathematics;
-using UnityEditor.UI;
-using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class BombNPCController : MonoBehaviour
@@ -16,7 +11,11 @@ public class BombNPCController : MonoBehaviour
     [SerializeField] private Animator anim;
 
     [SerializeField] GameObject poofPrefab;
-    
+
+    [Range(0,100)]
+    [SerializeField] private float explodeDist;
+
+
     private Rigidbody2D _player;
     private Rigidbody2D _rb;
     private float _distanceToPlayer;
@@ -50,6 +49,10 @@ public class BombNPCController : MonoBehaviour
     {
         Instantiate(poofPrefab, gameObject.transform.position, Quaternion.identity);
         _action = CurrentAction.Dying;
+        if (Vector2.Distance(_rb.position, _player.position) < explodeDist)
+        {
+            FindObjectOfType<CharacterController>().TakeDamage(1);
+        }
         gameObject.SetActive(false);
         Destroy(gameObject);
     }
@@ -140,6 +143,12 @@ public class BombNPCController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _rotationRads = +Mathf.PI;
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            CommitDying();
+            return;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

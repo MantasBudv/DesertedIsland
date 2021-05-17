@@ -18,6 +18,7 @@ TagManager:
   - BlackScreen
   - GameOverScreen
   - TimeText
+  - spawnpoint
   layers:
   - Default
   - TransparentFX

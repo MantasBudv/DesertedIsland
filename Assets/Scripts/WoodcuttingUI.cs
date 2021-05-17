@@ -28,7 +28,7 @@ public class WoodcuttingUI : MonoBehaviour
     {
         meleeAttack = Input.GetButtonDown("Fire1");
 
-        if (meleeAttack && axe.activeInHierarchy)
+        if (meleeAttack && axe != null && axe.activeInHierarchy && CharacterController.isNearTree)
         {
             if (GameIsWCMenu == false)
             {
