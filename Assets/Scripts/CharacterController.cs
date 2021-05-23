@@ -51,7 +51,7 @@ public class CharacterController : MonoBehaviour
     //XP and level system
     public static int currentLevel;
     public static int XP;
-    public static int skillPoints;
+    public static int skillPoints = 3;
     public static bool isNearWater;
     public static bool isNearTree;
 

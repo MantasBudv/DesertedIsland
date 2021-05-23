@@ -122,7 +122,7 @@ public class NPCControllerAgressive : MonoBehaviour
         var currentTime = Time.fixedTime;
         if (duplicateTimer >= 2.0f)
         {
-            Duplicate();
+            //Duplicate();
             duplicateTimer = 0.0f;
         }
     }
