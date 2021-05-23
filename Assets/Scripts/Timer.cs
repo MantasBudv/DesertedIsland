@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public UnityEngine.UI.Image img;
-    public static float timeStart = 1200;
+    public static float timeStart = 360;
     public static int day = 1;
     public int speed;
     public Text textBox;
